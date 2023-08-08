@@ -1,4 +1,4 @@
-function submitBtn5() {
+function submitBtn1() {
     analytics.track("Signed Up", {
     userId: "97980cfea0066",
       name: "Alex Wright",
