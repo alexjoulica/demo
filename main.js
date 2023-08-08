@@ -1,17 +1,54 @@
-/*function submitBtn1() {
-    document.getElementById(btn1)
-    
+function submitBtn5() {
+    analytics.track("Signed Up", {
+    userId: "97980cfea0066",
+      name: "Alex Wright",
+      email: "alexodwright@gmail.com",
+      model: "model x"
+  });    
 }
 function submitBtn2() {
-    document.getElementById(btn2)
+    analytics.track("Signed Up", {
+    userId: "97980cfea0066",
+      name: "Alex Wright",
+      email: "alexodwright@gmail.com",
+      model: "model y"
+  });    
 }
 function submitBtn3() {
-    document.getElementById(btn3)
+    analytics.track("Signed Up", {
+    userId: "97980cfea0066",
+      name: "Alex Wright",
+      email: "alexodwright@gmail.com",
+      model: "model z"
+  });    
 }
 function submitBtn4() {
-    document.getElementById(btn4)
+    analytics.track("Signed Up", {
+    userId: "97980cfea0066",
+      name: "Alex Wright",
+      email: "alexodwright@gmail.com",
+      model: "model 3"
+  });    
 }
 function submitBtn5() {
-    document.getElementById(btn5)
+    analytics.track("Signed Up", {
+    userId: "97980cfea0066",
+      name: "Alex Wright",
+      email: "alexodwright@gmail.com",
+      model: "model 4"
+  });    
 }
+/*function submitIdentify() {
+  const nameVal = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const planVal = document.getElementById('plan').value;
+  const actions = document.getElementById("actions").value;
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  analytics.identify({
+    firstName: firstName,
+    lastName: lastName,
+    email: email
+  });
+  }
 */
