@@ -73,7 +73,7 @@ top: 0;
 width: 100%;
 }
 #navigation-section a {
-float: left;
+float: center;
 display: block;
 color: rgb(54,57,64);
 text-align: center;
@@ -82,7 +82,7 @@ font-family: Verdana, sans-serif;
 font-size: 15px;
 text-decoration: none;
 }
-#navigation-section a:hover {
-/*background-color: black;*/
+/*#navigation-section a:hover {
+background-color: black;
 color: white;
-}
+}*/
