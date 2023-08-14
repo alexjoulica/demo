@@ -84,6 +84,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  width: 50%;
   top: 50%;
   right: 15%;
   padding: 15px;
@@ -93,6 +94,7 @@ body {
   font-size: 22px;
   text-decoration: none;
   background-color: teal;
+  float: right;
 }
 #container1 {
 position: relative;
