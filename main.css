@@ -90,3 +90,11 @@ color: white;
 body {
   background-color: black;
 }
+#text {
+  color: white;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  background-color: orange;
+}
