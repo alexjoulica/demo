@@ -81,13 +81,14 @@ padding: 14px 16px;
 font-family: Verdana, sans-serif;
 font-size: 15px;
 text-decoration: none;
+width: 16.6%;
 }
 /*#navigation-section a:hover {
 background-color: black;
 color: white;
 }*/
 #loggedIn {
-  float: right;
+  float: left;
   display: block;
   color: rgb(54,57,64);
   text-align: center;
@@ -95,6 +96,7 @@ color: white;
   font-family: Verdana, sans-serif;
   font-size: 15px;
   text-decoration: none;
+  width: 16.6%;
 }
 #logo {
   float: left;
@@ -105,4 +107,5 @@ color: white;
   font-family: Verdana, sans-serif;
   font-size: 15px;
   text-decoration: none;
+  width: 16.6%;
 }
