@@ -141,15 +141,14 @@ color: white;
   position: sticky;
 }
 .text button {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   width: 100%;
-  border-radius: 8px;
-  background-color: rgb(160, 163, 168);
+  background-color: white;
 }
 .text1 {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: auto;
   text-align: right;
   color: white;
   font-family: Verdana, sans-serif;
