@@ -38,5 +38,5 @@ function homeLoad() {
   }
 */
 function pageReload() {
-    location.reload();
+    window.location.href = "index.html";
 }
