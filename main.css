@@ -40,6 +40,7 @@ height: auto;
 position: absolute;
 top: 50%;
 left: 50%;
+width: 10%
 transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);
 background-color: white;
@@ -191,4 +192,7 @@ background-color: grey;
   font-size: 22px;
   text-decoration: none;
   background-color: grey;
+}
+#logo {
+  font-size: 30px;
 }
