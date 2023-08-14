@@ -1,4 +1,4 @@
-function submitBtn1() {
+function product() {
     window.location.href = "index1.html";
     analytics.track("Visited Products", {
       userId: "011of0012",
