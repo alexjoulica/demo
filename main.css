@@ -142,3 +142,6 @@ color: white;
   background-image: url('img1.jpg');
   width: 100%;
 }
+nav {
+  position: absolute;
+}
