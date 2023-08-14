@@ -37,12 +37,8 @@ height: auto;
 }
 
 #container .btn {
-position: absolute;
+position: relative;
 width: auto;
-top: 50%;
-right: 15%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
 background-color: white;
 color: black;
 font-size: 16px;
@@ -83,7 +79,7 @@ body {
   background-color: black;
 }
 .text {
-  position: absolute;;
+  position: absolute;
   width: 25%;
   right: 15%;
   top: 50%;
@@ -99,7 +95,6 @@ body {
 #container1 {
 position: relative;
 width: 100%;
-/*margin: 30px auto;*/
 }
 #container1 img {
   width: 50%;
@@ -131,7 +126,6 @@ color: white;
   position: sticky;
 }
 .text button {
-  /*border: 2px solid black;*/
   width: 100%;
   background-color: white;
   border-radius: 8px;
@@ -151,7 +145,6 @@ color: white;
 #subcontainer {
 position: relative;
 width: 100%;
-/*margin: 30px auto;*/
 background-color: grey;
 }
 #subcontainer img {
@@ -181,7 +174,7 @@ background-color: grey;
   padding: 14px;
 }
 .subtext {
-  position: absolute;
+  position: relative;
   float: right;
   width: 50%;
   height: auto;
