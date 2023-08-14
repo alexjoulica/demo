@@ -1,42 +1,17 @@
 function submitBtn1() {
-    analytics.track("Signed Up", {
-    userId: "97980cfea0066",
-      name: "Alex Wright",
-      email: "alexodwright@gmail.com",
-      model: "model x"
-  });    
+    window.locaton.href = "index1.html";
 }
 function submitBtn2() {
-    analytics.track("Signed Up", {
-    userId: "97980cfea0066",
-      name: "Alex Wright",
-      email: "alexodwright@gmail.com",
-      model: "model y"
-  });    
+    window.locaton.href = "index1.html";
 }
 function submitBtn3() {
-    analytics.track("Signed Up", {
-    userId: "97980cfea0066",
-      name: "Alex Wright",
-      email: "alexodwright@gmail.com",
-      model: "model z"
-  });    
+    window.locaton.href = "index1.html";    
 }
 function submitBtn4() {
-    analytics.track("Signed Up", {
-    userId: "97980cfea0066",
-      name: "Alex Wright",
-      email: "alexodwright@gmail.com",
-      model: "model 3"
-  });    
+    window.locaton.href = "index1.html";
 }
 function submitBtn5() {
-    analytics.track("Signed Up", {
-    userId: "97980cfea0066",
-      name: "Alex Wright",
-      email: "alexodwright@gmail.com",
-      model: "model 4"
-  });    
+    window.locaton.href = "index1.html";   
 }
 function homeLoad() {
   analytics.track("Loaded Homepage", {
