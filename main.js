@@ -5,10 +5,10 @@ function submitBtn2() {
     window.locaton.href = "index1.html";
 }
 function submitBtn3() {
-    window.locaton.href = "index1.html";    
+    window.locaton.href = "index2.html";    
 }
 function submitBtn4() {
-    window.locaton.href = "index1.html";
+    window.locaton.href = "index3.html";
 }
 function submitBtn5() {
     window.locaton.href = "index1.html";   
