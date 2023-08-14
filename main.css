@@ -106,12 +106,11 @@ body {
 }
 #container1 {
 position: relative;
-width: 50%;
+width: 100%;
 /*margin: 30px auto;*/
 }
 #container1 img {
   width: 50%;
-  height: auto;
 }
 .fill {
 object-fit: fill;
