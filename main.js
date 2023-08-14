@@ -37,3 +37,6 @@ function homeLoad() {
   });
   }
 */
+function pageReload() {
+    location.reload();
+}
