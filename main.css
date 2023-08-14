@@ -146,7 +146,8 @@ color: white;
   background-color: white;
 }
 .text1 {
-  position: absolute;
+  position: relative;
+  float: right;
   width: 50%;
   height: auto;
   text-align: right;
