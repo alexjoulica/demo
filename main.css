@@ -72,7 +72,7 @@ z-index: 10000;
 top: 0;
 width: 100%;
 }
-#navigation-section a {
+#tab {
 float: left;
 display: block;
 color: rgb(54,57,64);
