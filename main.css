@@ -90,9 +90,12 @@ color: white;
 body {
   background-color: black;
 }
-#text {
+.text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: right;
   color: white;
-  text-align: center;
   font-family: Verdana, sans-serif;
   font-size: 22px;
   text-decoration: none;
