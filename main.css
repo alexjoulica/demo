@@ -88,7 +88,7 @@ background-color: black;
 color: white;
 }*/
 body {
-  background-color: white;
+  background-color: black;
 }
 .text {
   position: absolute;
@@ -139,4 +139,7 @@ color: white;
 .container {
   background-image: url('img1.jpg');
   width: 100%;
+}
+nav {
+  display: inline;
 }
