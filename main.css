@@ -144,6 +144,7 @@ color: white;
   /*border: 2px solid black;*/
   width: 100%;
   background-color: white;
+  border-radius: 8px;
 }
 .text1 {
   position: relative;
