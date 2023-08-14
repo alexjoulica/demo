@@ -37,7 +37,7 @@ height: auto;
 }
 
 #container .btn {
-position: relative;
+position: absolute;
 width: auto;
 transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);
@@ -81,11 +81,12 @@ body {
   background-color: black;
 }
 .text {
-  position: relative;
+  position: absolute;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   width: 25%;
   top: 50%;
+  right: 15%
   padding: 15px;
   text-align: right;
   color: white;
