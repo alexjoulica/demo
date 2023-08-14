@@ -83,7 +83,8 @@ body {
   text-decoration: none;
 }
 .text {
-  position: absolute;
+  position: relative;
+  float: right;
   width: auto;
   top: 50%;
   right: 15%;
@@ -132,6 +133,7 @@ color: white;
 }
 .text1 {
   position: relative;
+  float: right;
   width: 50%;
   height: auto;
   text-align: left;
