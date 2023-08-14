@@ -106,14 +106,11 @@ body {
 }
 #container1 {
 position: relative;
-width: 50%;
-max-width: auto;
+width: 100%;
 scroll-snap-type: both mandatory;
 /*margin: 30px auto;*/
-white-space: nowrap;
-overflow-y: scroll;
 }
-#container1 img {
+#img1 {
 object-fit: fill;
 }
 
