@@ -184,3 +184,10 @@ width: 100%;
   font-size: 12px;
   margin: 10%;
 }
+.text1 button {
+  /*border: 2px solid black;*/
+  color: black;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+}
