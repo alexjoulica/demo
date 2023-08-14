@@ -38,6 +38,12 @@ function submitBtn5() {
       model: "model 4"
   });    
 }
+function homeLoad() {
+  analytics.track("Loaded Homepage", {
+  userId: "97980cfea0066",
+  name: "Anonymous User",
+  });
+}
 /*function submitIdentify() {
   const nameVal = document.getElementById('name').value;
   const email = document.getElementById('email').value;
