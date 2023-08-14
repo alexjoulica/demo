@@ -162,6 +162,7 @@ color: white;
 position: relative;
 width: 100%;
 /*margin: 30px auto;*/
+background-color: grey;
 }
 #subcontainer img {
   width: 25%;
@@ -175,6 +176,8 @@ width: 100%;
   text-alignment: center;
   font-size: 12px;
   margin: 10%;
+  border-radius: 8px;
+  padding: 14px;
 }
 .findOutMore {
   background-color: grey;
@@ -183,6 +186,8 @@ width: 100%;
   text-alignment: center;
   font-size: 12px;
   margin: 10%;
+  border-radius: 8px;
+  padding: 14px;
 }
 .subtext {
   position: relative;
