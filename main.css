@@ -31,7 +31,7 @@ position: relative;
 width: 100%;
 max-width: auto;
 scroll-snap-type: both mandatory;
-margin: 30px auto;
+/*margin: 30px auto;*/
 white-space: nowrap;
 overflow-y: scroll;
 }
