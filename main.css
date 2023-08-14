@@ -168,11 +168,12 @@ width: 100%;
   float: left;
 }
 .applyOnline {
-  backgrond-color: blue;
+  background-color: blue;
   color: white;
   float: right;
   text-alignment: center;
   font-size: 12px;
+  margin: 10%;
 }
 .findOutMore {
   background-color: grey;
@@ -180,4 +181,5 @@ width: 100%;
   float: right;
   text-alignment: center;
   font-size: 12px;
+  margin: 10%;
 }
