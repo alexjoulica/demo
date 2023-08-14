@@ -86,7 +86,6 @@ body {
   -ms-transform: translate(-50%, -50%);
   width: 25%;
   top: 50%;
-  right: 15%;
   padding: 15px;
   text-align: right;
   color: white;
@@ -109,7 +108,7 @@ object-fit: fill;
 }
 
 #container1 .btn {
-position: absolute;
+position: relative;
 transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);
 background-color: #f1f1f1;
@@ -168,6 +167,7 @@ background-color: grey;
   margin: 0% 100px 0% 0%;
   border-radius: 8px;
   padding: 14px;
+  width: 108.7px;
 }
 .findOutMore {
   background-color: grey;
