@@ -136,10 +136,6 @@ text-align: center;
 background-color: black;
 color: white;
 }
-.container {
-  background-image: url('img1.jpg');
-  width: 100%;
-}
 nav {
   display: inline;
 }
