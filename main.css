@@ -109,7 +109,7 @@ position: relative;
 width: 50%;
 /*margin: 30px auto;*/
 }
-#container1 img {
+.fill {
 object-fit: fill;
 }
 
