@@ -136,6 +136,7 @@ text-align: center;
 background-color: black;
 color: white;
 }
-nav {
+#container nav {
   display: inline;
+  position: sticky;
 }
