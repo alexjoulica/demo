@@ -103,6 +103,7 @@ body {
   font-size: 22px;
   text-decoration: none;
   background-color: teal;
+  opacity: 30%;
 }
 #container1 {
 position: relative;
