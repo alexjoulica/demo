@@ -110,7 +110,7 @@ width: 100%;
 scroll-snap-type: both mandatory;
 /*margin: 30px auto;*/
 }
-#container img {
+#container1 img {
 object-fit: fill;
 }
 
