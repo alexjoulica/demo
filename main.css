@@ -140,3 +140,8 @@ color: white;
   display: inline;
   position: sticky;
 }
+#productButton {
+  border: 2px solid black;
+  width: 20px;
+  border-radius: 8px;
+}
