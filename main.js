@@ -38,5 +38,5 @@ function homeLoad() {
   }
 */
 function pageReload() {
-    window.location.href = "index.html";
+    window.location.href = "https://main.d3h7xcybxbljti.amplifyapp.com";
 }
