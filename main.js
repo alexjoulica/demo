@@ -1,5 +1,9 @@
 function submitBtn1() {
     window.location.href = "index1.html";
+    analytics.track("Visited Products", {
+      userId: "011of0012",
+      name: "Anonymous User",
+      });
 }
 function submitBtn2() {
     window.location.href = "index2.html";
