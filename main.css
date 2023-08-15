@@ -69,11 +69,13 @@ font-family: Verdana, sans-serif;
 font-size: 22px;
 text-decoration: none;
 width: 20%;
+padding: 20px;
+margin: 0px;
 }
-/*#navigation-section a:hover {
-background-color: black;
-color: white;
-}*/
+#navigation-section a:hover {
+background-color: white;
+color: black;
+}
 body {
   background-color: black;
   color: white;
@@ -140,7 +142,7 @@ color: white;
   text-align: left;
   background-color: grey;
 }
-#subcontainer {
+#outer {
   position: relative;
   display: table;
   width: 100%;
@@ -148,16 +150,16 @@ color: white;
   margin: 0px;
   border: 1px solid white;
 }
-#subcontainer img {
+#outer img {
   position: relative;
-  width: 30%;
+  width: 50%;
   left: 10%;
-  bottom: 0;
+  margin: 20px;
   border-radius: 7px;
-  display: table-cell;
+  border: 2px solid white;
 }
 .applyOnline {
-  background-color: blue;
+  background-color: rgb(49, 124, 181);
   color: white;
   text-align: center;
   font-size: 12px;
@@ -165,18 +167,20 @@ color: white;
   border: 1px solid black;
   padding: 14px;
   width: 108.7px;
+  border-radius: 4px;
 }
 .findOutMore {
-  background-color: grey;
+  background-color: rgb(65, 217, 111);
   color: black;
   text-align: center;
   font-size: 12px;
   /*margin: 0% 100px 0% 0%;*/
   border: 1px solid black;
   padding: 14px;
+  border-radius: 4px;
 }
-#subcontainer .subtext {
-  position: absolute;
+.inner {
+  position: relative;
   right: 0;
   top: 0;
   width: 50%;
