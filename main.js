@@ -46,3 +46,15 @@ function ModelY() {
     username: "Alex Wright",
     });
 }
+function ModelC() {
+  analytics.track("Model C", {
+    userId: "011of0012",
+    username: "Alex Wright",
+    });
+}
+function ModelPlaid() {
+  analytics.track("Model Plaid", {
+    userId: "011of0012",
+    username: "Alex Wright",
+    });
+}
