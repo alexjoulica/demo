@@ -1,18 +1,5 @@
-
-function submitBtn2() {
-    window.location.href = "index1.html";
-}
-function submitBtn3() {
-    window.location.href = "index3.html";    
-}
-function submitBtn4() {
-    window.location.href = "index4.html";
-}
-function submitBtn5() {
-    window.location.href = "index5.html";   
-}
 function homeLoad() {
-  analytics.track("Loaded Homepage", {
+  analytics.track("Homepage", {
   userId: "011of0012",
   name: "Anonymous User",
   });
@@ -31,17 +18,30 @@ function homeLoad() {
   });
   }
 */
-function visitHome() {
-  window.location.href = "index.html";
-  analytics.track("Visited Homepage", {
-    userId: "011of0012",
-    username: "Alex Wright",
-  });
+function Home() {
   window.location.href = "index.html";
 }
-function visitProducts() {
-  window.location.href = "index1.html";
-  analytics.track("Visited Products", {
+function Products() {
+  window.location.href = "products.html";
+  analytics.track("Products", {
+    userId: "011of0012",
+    username: "Alex Wright",
+    });
+}
+function Model3() {
+  analytics.track("Model 3", {
+    userId: "011of0012",
+    username: "Alex Wright",
+    });
+}
+function ModelX() {
+  analytics.track("Model X", {
+    userId: "011of0012",
+    username: "Alex Wright",
+    });
+}
+function ModelY() {
+  analytics.track("Model Y", {
     userId: "011of0012",
     username: "Alex Wright",
     });

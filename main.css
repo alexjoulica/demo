@@ -86,14 +86,16 @@ body {
   top: 30%;
   width: 300px;
   right: 15%;
-  text-align: left;
+  text-align: center;
   padding: 20px;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.7);
   border-radius: 6px;
 }
 #container1 {
 position: relative;
 width: 100%;
+background-color: grey;
+border: 1px solid white;
 }
 #container1 img {
   width: 50%;
@@ -102,7 +104,9 @@ width: 100%;
 .fill {
 object-fit: fill;
 }
-
+.cover {
+  object-fit: cover;
+}
 #container1 .btn {
 position: absolute;
 background-color: #f1f1f1;
@@ -133,20 +137,24 @@ color: white;
   top: 0;
   width: 50%;
   right: 0;
-  height: auto;
   text-align: left;
   background-color: grey;
 }
 #subcontainer {
-position: relative;
-width: 100%;
-background-color: grey;
+  position: relative;
+  display: table;
+  width: 100%;
+  background-color: grey;
+  margin: 0px;
+  border: 1px solid white;
 }
 #subcontainer img {
-  position: absolute;
-  width: 25%;
-  top: 10%;
+  position: relative;
+  width: 30%;
   left: 10%;
+  bottom: 0;
+  border-radius: 7px;
+  display: table-cell;
 }
 .applyOnline {
   background-color: blue;
@@ -167,13 +175,16 @@ background-color: grey;
   border: 1px solid black;
   padding: 14px;
 }
-.subtext {
+#subcontainer .subtext {
   position: absolute;
   right: 0;
+  top: 0;
   width: 50%;
   height: auto;
   text-align: left;
   background-color: grey;
+  padding: 6px;
+  display: table-cell;
 }
 #logo {
   font-size: 30px;
@@ -189,15 +200,9 @@ a {
 }
 #buttons {
   position: absolute;
-  right: 0;
+  right: 50px;
+  bottom: 15%;
 }
-#subcontainer img {
-  position: absolute;
-}
-ul {
-  /*display: inline-block;*/
-  float: left;
-}
-h2 {
-  float: left;
+button {
+  cursor: pointer;
 }
