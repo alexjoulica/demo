@@ -203,7 +203,7 @@ a {
 }
 #buttons {
   position: absolute;
-  right: 50px;
+  right: 10%;
   bottom: 15%;
 }
 button {
