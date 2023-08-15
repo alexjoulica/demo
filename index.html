@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body onload="homeLoad()">
+<body>
 <head>
     <title>Segment Demo</title>
     <meta name="author" content="Alex">
@@ -8,59 +8,44 @@
     <meta charset="utf-8">
     <link rel="stylesheet" id="style" href="main.css">
     <script type="text/javascript" src="main.js"></script>
-    <script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="SDfgj9GHaQwyoSSDOzvT8G1itoJSbd74";;analytics.SNIPPET_VERSION="4.16.1";
-  analytics.load("SDfgj9GHaQwyoSSDOzvT8G1itoJSbd74");
-  analytics.page();
-  }}();
-</script>
 </head>
-        <nav id="navigation-section">
-            <a style="cursor:pointer;" onclick="pageReload()" id="logo">FinCX</a>
-            <a onclick="product()" href="#img1" id="tab">Products</a>
-            <a href="#img2" id="tab">Latest News</a>
-            <a href="#img4" id="tab">Resources</a>
-            <a id="loggedIn">Logged In</a>
-        </nav>
+<nav id="navigation-section">
+    <a href="#img1">Image 1</a>
+    <a href="#img2">Image 2</a>
+    <a href="#img3">Image 3</a>
+    <a href="#img4">Image 4</a>
+    <a href="#img5">Image 5</a>
+  </nav>
 </body>
 <body>
     <div id="container">
+        <div class="container" id="img1">
         <img src="img1.jpg" alt="img1">
-    <div class="text">
-        <h1>Student Accounts</h1>
-        <p1>More Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info.</p1>
-        <br>
-        <button class="btn">Find Out More</button>
-    </div>
-    </div>
-    <div id="container1">
-        <div id="img3">
-        <img class="fill" src="img3.jpg" alt="img3">
-        <div class="text1">
-            <p1>Lorem ipsum dolor</p1>
+        <button onclick="window.location.href = 'index1.html';" class="btn" id="btn1">More Information</button>
         </div>
-        <!--button onclick="window.location.href = 'index3.html';" class="btn" id="btn3">More Information</button-->
-        <!--button onclick="submitBtn3()" class="btn" id="btn3">More Information</button-->
+    </div>
+    <div id="container">
+        <div class="container" id="img2">
+        <img src="img2.jpg" alt="img2">
+        <button onclick="window.location.href = 'index2.html';" class="btn" id="btn2">More Information</button>
+        </div>
+    </div>
+    <div id="container">
+        <div class="container" id="img3">
+        <img src="img3.jpg" alt="img3">
+        <button onclick="window.location.href = 'index3.html';" class="btn" id="btn3">More Information</button>
         </div>
     </div> 
-    <div id="container1">
-        <div id="img4">
-        <img class="fill" src="img4.jpg" alt="img4">
-        <div class="text1">
-            <p1>Lorem ipsum dolor</p1>
-        </div>
-        <!--button onclick="window.location.href = 'index4.html';" class="btn" id="btn4">More Information</button-->
-        <!--button onclick="submitBtn4()" class="btn" id="btn4">More Information</button-->
+    <div id="container">
+        <div class="container" id="img4">
+        <img src="img4.jpg" alt="img4">
+        <button onclick="window.location.href = 'index4.html';" class="btn" id="btn4">More Information</button>
         </div>
     </div> 
-    <div id="container1">
-        <div id="img5">
-        <img class="fill" src="img5.jpg" alt="img5">
-        <div class="text1">
-            <p1>Lorem ipsum dolor</p1>
-        </div>
-        <!--button onclick="window.location.href = 'index5.html';" class="btn" id="btn5">More Information</button-->
-        <!--button onclick="submitBtn5()" class="btn" id="btn5">More Information</button-->
+    <div id="container">
+        <div class="container" id="img5">
+        <img src="img5.jpg" alt="img5">
+        <button onclick="window.location.href = 'index5.html';" class="btn" id="btn5">More Information</button>
         </div>
     </div> 
 </body>

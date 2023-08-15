@@ -1,42 +1,17 @@
-function product() {
-    window.location.href = "index1.html";
-    analytics.track("Visited Products", {
-      userId: "011of0012",
-      name: "Anonymous User",
-      });
+/*function submitBtn1() {
+    document.getElementById(btn1)
+    
 }
 function submitBtn2() {
-    window.location.href = "index2.html";
+    document.getElementById(btn2)
 }
 function submitBtn3() {
-    window.location.href = "index3.html";    
+    document.getElementById(btn3)
 }
 function submitBtn4() {
-    window.location.href = "index4.html";
+    document.getElementById(btn4)
 }
 function submitBtn5() {
-    window.location.href = "index5.html";   
+    document.getElementById(btn5)
 }
-function homeLoad() {
-  analytics.track("Loaded Homepage", {
-  userId: "011of0012",
-  name: "Anonymous User",
-  });
-}
-/*function submitIdentify() {
-  const nameVal = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const planVal = document.getElementById('plan').value;
-  const actions = document.getElementById("actions").value;
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  analytics.identify({
-    firstName: firstName,
-    lastName: lastName,
-    email: email
-  });
-  }
 */
-function pageReload() {
-    window.location.href = "https://main.d3h7xcybxbljti.amplifyapp.com";
-}
