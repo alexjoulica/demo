@@ -1,17 +1,48 @@
-/*function submitBtn1() {
-    document.getElementById(btn1)
-    
-}
+
 function submitBtn2() {
-    document.getElementById(btn2)
+    window.location.href = "index1.html";
 }
 function submitBtn3() {
-    document.getElementById(btn3)
+    window.location.href = "index3.html";    
 }
 function submitBtn4() {
-    document.getElementById(btn4)
+    window.location.href = "index4.html";
 }
 function submitBtn5() {
-    document.getElementById(btn5)
+    window.location.href = "index5.html";   
 }
+function homeLoad() {
+  analytics.track("Loaded Homepage", {
+  userId: "011of0012",
+  name: "Anonymous User",
+  });
+}
+/*function submitIdentify() {
+  const nameVal = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const planVal = document.getElementById('plan').value;
+  const actions = document.getElementById("actions").value;
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  analytics.identify({
+    firstName: firstName,
+    lastName: lastName,
+    email: email
+  });
+  }
 */
+function visitHome() {
+  window.location.href = "index.html";
+  analytics.track("Visited Homepage", {
+    userId: "011of0012",
+    username: "Alex Wright",
+  });
+  window.location.href = "index.html";
+}
+function visitProducts() {
+  window.location.href = "index1.html";
+  analytics.track("Visited Products", {
+    userId: "011of0012",
+    username: "Alex Wright",
+    });
+}
