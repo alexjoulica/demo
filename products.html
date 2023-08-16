@@ -16,14 +16,30 @@
 </script>
 <link href='https://fonts.googleapis.com/css?family=Spline Sans' rel='stylesheet'>
 </head>
-        <nav id="navigation-section">
-            <a onclick="Home()" id="logo">FinCX</a>
-            <a onclick="Products()" id="tab">Products</a>
-            <a id="tab">Latest News</a>
-            <a id="tab">Resources</a>
-            <a id="loggedIn">Logged In</a>
-        </nav>
-</body>
+<div class="navbar">
+    <a style="width: 20%;" onclick="Home()">FinCX</a>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="productsDropdown()">Products
+        </button>
+        <div class="dropdown-content" id="productsDropdown">
+            <a style="padding: 20px 32px 20px 32px" onclick="Products()">Savings</a>
+            <a style="padding: 20px 32px 20px 32px">Loans</a>
+            <a style="padding: 20px 32px 20px 32px">Mortgages</a>
+        </div>
+        </div> 
+    <a style="width: 20%;">Latest News</a>
+    <a style="width: 20%;">Resources</a>
+    <div class="dropdown">
+    <button class="dropbtn" onclick="loginDropdown()">Login
+    </button>
+    <div class="dropdown-content" id="loginDropdown">
+        <a style="padding: 20px 32px 20px 32px" onclick="loginTony()">Tony</a>
+        <a style="padding: 20px 32px 20px 32px" onclick="loginAlex()">Alex</a>
+        <a style="padding: 20px 32px 20px 32px" onclick="loginJohn()">John</a>
+        <a style="padding: 20px 32px 20px 32px" onclick="loginJoe()">Joe</a>
+    </div>
+    </div> 
+  </div>
 <body>
     <div id="container">
         <h1 class="title">Outsavings Accounts</h1>
