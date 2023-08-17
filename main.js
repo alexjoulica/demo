@@ -4,6 +4,7 @@ function homeLoad() {
   analytics.track("Homepage", {
   userId: id,
   username: usrnm,
+  channel: "Web",
   });
 }
 /*function submitIdentify() {
@@ -28,36 +29,42 @@ function Products() {
   analytics.track("Products", {
     userId: id,
     username: usrnm,
+    channel: "Web",
     });
 }
 function Model3() {
   analytics.track("Model 3", {
     userId: id,
     username: usrnm,
+    channel: "Web",
     });
 }
 function ModelX() {
   analytics.track("Model X", {
     userId: id,
     username: usrnm,
+    channel: "Web",
     });
 }
 function ModelY() {
   analytics.track("Model Y", {
     userId: id,
     username: usrnm,
+    channel: "Web",
     });
 }
 function ModelC() {
   analytics.track("Model C  ", {
     userId: id,
     username: usrnm,
+    channel: "Web",
     });
 }
 function ModelPlaid() {
   analytics.track("Model Plaid", {
     userId: id,
     username: usrnm,
+    channel: "Web",
     });
 }
 function loginTony(){
