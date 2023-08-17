@@ -34,7 +34,7 @@ function Products() {
 }
 function Model3() {
   analytics.track("Model", {
-    userId: id,
+    sessionId: id,
     username: usrnm,
     channel: "Web",
     product: "Model 3",
@@ -42,7 +42,7 @@ function Model3() {
 }
   function ModelX() {
   analytics.track("Model", {
-    userId: id,
+    sessionId: id,
     username: usrnm,
     channel: "Web",
     product: "Model X",
@@ -50,7 +50,7 @@ function Model3() {
 }
 function ModelY() {
   analytics.track("Model", {
-    userId: id,
+    sessionId: id,
     username: usrnm,
     channel: "Web",
     product: "Model Y",
@@ -58,7 +58,7 @@ function ModelY() {
 }
 function ModelC() {
   analytics.track("Model", {
-    userId: id,
+    sessionId: id,
     username: usrnm,
     channel: "Web",
     product: "Model C",
@@ -66,7 +66,7 @@ function ModelC() {
 }
 function ModelPlaid() {
   analytics.track("Model", {
-    userId: id,
+    sessionId: id,
     username: usrnm,
     channel: "Web",
     product: "Model P",
