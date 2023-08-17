@@ -33,10 +33,11 @@ function Products() {
     });
 }
 function Model3() {
-  analytics.track("Model 3", {
+  analytics.track("Model", {
     userId: id,
     username: usrnm,
     channel: "Web",
+    product: "Model 3";
     });
 }
 function ModelX() {
