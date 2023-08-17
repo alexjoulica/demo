@@ -40,48 +40,52 @@ function Model3() {
     product: "Model 3",
     });
 }
-function ModelX() {
-  analytics.track("Model X", {
+  function ModelX() {
+  analytics.track("Model", {
     userId: id,
     username: usrnm,
     channel: "Web",
+    product: "Model X",
     });
 }
 function ModelY() {
-  analytics.track("Model Y", {
+  analytics.track("Model", {
     userId: id,
     username: usrnm,
     channel: "Web",
+    product: "Model Y",
     });
 }
 function ModelC() {
-  analytics.track("Model C  ", {
+  analytics.track("Model", {
     userId: id,
     username: usrnm,
     channel: "Web",
+    product: "Model C",
     });
 }
 function ModelPlaid() {
-  analytics.track("Model Plaid", {
+  analytics.track("Model", {
     userId: id,
     username: usrnm,
     channel: "Web",
+    product: "Model P",
     });
 }
 function loginTony(){
-  id = "001";
+  id = Math.floor(Math.random() * 101);
   usrnm = "tony@joulica.io"
 }
 function loginAlex(){
-  id = Math.floor(Math.random() * 11);
+  id = Math.floor(Math.random() * 101);
   usrnm = "alex@joulica.io"
 }
 function loginJohn(){
-  id = "003";
+  id = Math.floor(Math.random() * 101);
   usrnm = "john@joulica.io"
 }
 function loginJoe(){
-  id = "004";
+  id = Math.floor(Math.random() * 101);
   usrnm = "joe@joulica.io"
 }
 /*
