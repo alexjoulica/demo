@@ -1,4 +1,4 @@
-var id;
+var id = "Unknown";
 var usrnm;
 function homeLoad() {
   analytics.track("Homepage", {
