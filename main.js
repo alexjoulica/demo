@@ -37,7 +37,7 @@ function Model3() {
     userId: id,
     username: usrnm,
     channel: "Web",
-    product: "Model 3";
+    product: "Model 3",
     });
 }
 function ModelX() {
