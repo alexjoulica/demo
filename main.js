@@ -27,7 +27,7 @@ function Home() {
 function Products() {
   window.location.href = "products.html";
   analytics.track("Products", {
-    userId: id,
+    sessionId: id,
     username: usrnm,
     channel: "Web",
     });
