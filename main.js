@@ -88,38 +88,12 @@ function loginJoe(){
   id = Math.floor(Math.random() * 101);
   usrnm = "joe@joulica.io"
 }
-/*
-function login() {
-  var label = document.getElementById("labellogIn")
-  var loginlabel = document.getElementById('logIn');
-  if(loginlabel.style.display === "none"){
-    label.style.width = "10%";
-    label.innerHTML = "Log In";  
-    loginlabel.style.display = "block";
-  }
-  else{
-    label.style.width = "20%";
-    label.innerHTML = "Logged In";  
-    loginlabel.style.display = "none";
-  }
-  var submitbtn = document.getElementById('loginsubmit');
-  if(submitbtn.style.display === "none"){
-    submitbtn.style.display = "block";
-  }
-  else{
-    submitbtn.style.display = "none";
-  }
-}
-*/
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 function productsDropdown() {
   document.getElementById("productsDropdown").classList.toggle("show");
 }
 function loginDropdown() {
   document.getElementById("loginDropdown").classList.toggle("show");
 }
-// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
