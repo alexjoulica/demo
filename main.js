@@ -1,4 +1,4 @@
-var id = "Unknown";
+var id;
 var usrnm;
 function homeLoad() {
   analytics.track("Homepage", {
@@ -72,7 +72,7 @@ function loginTony(){
   usrnm = "tony@joulica.io"
 }
 function loginAlex(){
-  id = "002";
+  id = Math.floor(Math.random() * 11);
   usrnm = "alex@joulica.io"
 }
 function loginJohn(){
