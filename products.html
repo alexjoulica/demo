@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="checkLogin()">
 <head>
     <title>Segment Demo</title>
     <meta name="author" content="Alex">
@@ -11,21 +11,19 @@
 <link href='https://fonts.googleapis.com/css?family=Spline Sans' rel='stylesheet'>
 </head>
 <div class="navbar">
-    <a style="width: 20%;" onclick="Home()">FinCX</a>
+    <a style="width: 20%; font-weight: bolder; font-size: 50px;" onclick="Home()">FinCX</a>
     <div class="dropdown">
-        <button class="dropbtn" onclick="productsDropdown()">Products
-        </button>
+        <button style="font-weight: bolder;" class="dropbtn" onclick="productsDropdown()">Products</button>
         <div class="dropdown-content" id="productsDropdown">
             <a style="padding: 20px 32px 20px 32px" onclick="Products()">Savings</a>
             <a style="padding: 20px 32px 20px 32px">Loans</a>
             <a style="padding: 20px 32px 20px 32px">Mortgages</a>
         </div>
         </div> 
-    <a style="width: 20%;">Latest News</a>
-    <a style="width: 20%;">Resources</a>
-    <div class="dropdown">
-    <button class="dropbtn" onclick="loginDropdown()">Login
-    </button>
+    <a style="width: 20%; padding: 40px 0px 40px 0px;">Latest News</a>
+    <a style="width: 20%; padding: 40px 0px 40px 0px;">Resources</a>
+    <div onload="checkLogin()" class="dropdown">
+    <button style="font-weight: bolder;" id="loginbtn" class="dropbtn" onclick="loginDropdown()">Login</button>
     <div class="dropdown-content" id="loginDropdown">
         <a style="padding: 20px 32px 20px 32px" onclick="loginTony()">Tony</a>
         <a style="padding: 20px 32px 20px 32px" onclick="loginAlex()">Alex</a>

@@ -6,7 +6,6 @@ if (sessionId == null) {
     sessionId = Math.floor(Math.random() * 100000);
     sessionStorage.setItem("sessionId", sessionId);
 }
-
 /* Load the Analytics */
 !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="SDfgj9GHaQwyoSSDOzvT8G1itoJSbd74";;analytics.SNIPPET_VERSION="4.16.1";
     analytics.load("SDfgj9GHaQwyoSSDOzvT8G1itoJSbd74");
@@ -16,7 +15,15 @@ if (sessionId == null) {
     });
 }}();
 /* Load the Analytics */
-
+function checkLogin() {
+    var x = localStorage.getItem("usrnm", "null");
+    if (x == null) {
+        document.getElementById("loginbtn").innerHTML = "Login";
+    } else {
+        document.getElementById("loginbtn").innerHTML = "Logged In: " + x;
+        document.getElementById("loginpfp").style.display = "block";
+}
+}
 function homeLoad() {
     analytics.track("Homepage", {
         sessionId: sessionId,
@@ -92,18 +99,22 @@ function ModelPlaid() {
 function loginTony(){
     localStorage.setItem("id", Math.floor(Math.random() * 101));
     localStorage.setItem("usrnm", "tony@joulica.io");
+    document.getElementById("loginbtn").innerHTML = "Logged In: " + localStorage.getItem("usrnm");
 }
 function loginAlex(){
     localStorage.setItem("id", Math.floor(Math.random() * 101));
     localStorage.setItem("usrnm", "alex@joulica.io");
+    document.getElementById("loginbtn").innerHTML = "Logged In: " + localStorage.getItem("usrnm");
 }
 function loginJohn(){
     localStorage.setItem("id", Math.floor(Math.random() * 101));
     localStorage.setItem("usrnm", "john@joulica.io");
+    document.getElementById("loginbtn").innerHTML = "Logged In: " + localStorage.getItem("usrnm");
 }
 function loginJoe(){
     localStorage.setItem("id", Math.floor(Math.random() * 101));
     localStorage.setItem("usrnm", "joe@joulica.io");
+    document.getElementById("loginbtn").innerHTML = "Logged In: " + localStorage.getItem("usrnm");
 }
 function productsDropdown() {
     document.getElementById("productsDropdown").classList.toggle("show");

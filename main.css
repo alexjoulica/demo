@@ -200,6 +200,7 @@ button {
   text-decoration: none;
   padding: 20px 0px 20px 0px;
   margin: 0;
+  font-weight: bolder;
 }
 .dropdown {
   float: left;
@@ -214,7 +215,7 @@ button {
   border: none;
   outline: none;
   color: white;
-  padding: 20px 0px 20px 0px;
+  padding: 40px 0px 40px 0px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
