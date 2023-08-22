@@ -122,10 +122,12 @@ function addCarsToProductPage() {
 
     for (let i = 0; i < cars.length; i++) {
         let carHTML = `
-        <div id="outer">
+        <div class="car-info">
             <div class="inner">
-                <h1 style="margin: 0px;">${cars[i][0]}</h1>
-                <img src="${cars[i][1]}" alt="img5" />
+                <center>
+                    <h1 style="margin: 0px;">${cars[i][0]}</h1>
+                    <img src="${cars[i][1]}" class="car-image" width="100%" />
+                </center>
             </div>
 
             <div class="inner">
@@ -148,10 +150,12 @@ function addCarsToProductPage() {
                 </div>
 
                 <div id="buttons">
-                    <button class="applyOnline">Apply Online</button>
-                    <br />
-                    <br />
-                    <button onclick="findOutMore('${cars[i][0]}', ${i})" class="findOutMore">Find Out More</button>
+                    <center>
+                        <button class="findOutMore">Apply Online</button>
+                        <br /><br />
+                        <button onclick="findOutMore('${cars[i][0]}', ${i})" class="findOutMore"style="background-color: red; border-color: red">Find Out More</button>
+                        <br /><br /><br /><br />
+                    </center>
                 </div>
             </div>
         </div>`;
