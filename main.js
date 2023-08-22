@@ -21,11 +21,11 @@ function checkLogin() {
     }
 }
 
-function findOutMore(product, carIndex) {
+function findOutMore(product, savingsIndex) {
     // Unhide the find out more section
-    document.getElementById("findOutMore" + carIndex).style.display = 'block';
+    document.getElementById("findOutMore" + savingsIndex).style.display = 'block';
 
-    analytics.track("Model", {
+    analytics.track("Savings", {
         sessionId: sessionId,
         username: localStorage.getItem("usrnm", "null"),
         channel: "Web",
@@ -112,27 +112,25 @@ function loadDemo() {
     }
 }
 
-function addCarsToProductPage() {
-    let cars = [
-        ["Model 3", "img3.jpg"],
-        ["Model X", "img4.jpg"],
-        ["Model Y", "img5.jpg"],
-        ["Model C", "cybertruck.jpg"],
-        ["Model P", "plaid.jpg"]
+function addSavingsToProductPage() {
+    let savings = [
+        ["Savings 1", "students.jpg"],
+        ["Savings 2", "family.jpg"],
+        ["Savings 3", "backpack.jpg"],
     ];
 
-    for (let i = 0; i < cars.length; i++) {
-        let carHTML = `
-        <div class="car-info">
+    for (let i = 0; i < savings.length; i++) {
+        let savingsHTML = `
+        <div class="info">
             <div class="inner">
                 <center>
-                    <h1 style="margin: 0px;">${cars[i][0]}</h1>
-                    <img src="${cars[i][1]}" class="car-image" width="100%" />
+                    <h1 style="margin: 0px;">${savings[i][0]}</h1>
+                    <img src="${savings[i][1]}" class="image" width="100%" />
                 </center>
             </div>
 
             <div class="inner">
-                <p>Our competitive interest rates ensure that you get an affordable financing solution for your new ${cars[i][0]}.</p>
+                <p>Our competitive interest rates ensure that you get an affordable financing solution for your new ${savings[i][0]}.</p>
                 <br />
                 <h2>Features:</h2>
                 <ul>
@@ -154,13 +152,13 @@ function addCarsToProductPage() {
                     <center>
                         <button class="findOutMore">Apply Online</button>
                         <br /><br />
-                        <button onclick="findOutMore('${cars[i][0]}', ${i})" class="findOutMore"style="background-color: red; border-color: red">Find Out More</button>
+                        <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore"style="background-color: red; border-color: red">Find Out More</button>
                         <br /><br /><br /><br />
                     </center>
                 </div>
             </div>
         </div>`;
 
-        document.getElementsByTagName("body")[0].innerHTML += carHTML;
+        document.getElementsByTagName("body")[0].innerHTML += savingsHTML;
     }
 }
