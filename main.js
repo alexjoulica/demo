@@ -11,15 +11,6 @@ if (sessionId == null) {
         username: localStorage.getItem("usrnm", "null")
     });
 }}();
-/* Load the Analytics */
-function checkLogin() {
-    var x = localStorage.getItem("usrnm", "null");
-    if (x == null) {
-        document.getElementById("loginbtn").innerHTML = "Login";
-    } else {
-        document.getElementById("loginpfp").style.display = "block";
-    }
-}
 
 function findOutMore(product, carIndex) {
     // Unhide the find out more section
