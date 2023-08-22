@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<body onload="homeLoad()">
 <head>
     <title>Segment Demo</title>
     <meta name="author" content="Alex">
@@ -8,41 +7,26 @@
     <meta charset="utf-8">
     <link rel="stylesheet" id="style" href="main.css">
     <script type="text/javascript" src="main.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Spline Sans' rel='stylesheet'>
+    <script>
+    analytics.track("Homepage", {
+        sessionId: sessionId,
+        username: localStorage.getItem("usrnm", "null"),
+        channel: "Web",
+    });
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Spline Sans' rel='stylesheet'>
 </head>
-<div class="navbar">
-    <a style="width: 20%; font-weight: bolder; font-size: 50px;" onclick="Home()">FinCX</a>
-    <div class="dropdown">
-        <button style="font-weight: bolder;" class="dropbtn" onclick="productsDropdown()">Products</button>
-        <div class="dropdown-content" id="productsDropdown">
-            <a style="padding: 20px 32px 20px 32px" onclick="Products()">Savings</a>
-            <a style="padding: 20px 32px 20px 32px">Loans</a>
-            <a style="padding: 20px 32px 20px 32px">Mortgages</a>
-        </div>
-        </div> 
-    <a style="width: 20%; padding: 40px 0px 40px 0px;">Latest News</a>
-    <a style="width: 20%; padding: 40px 0px 40px 0px;">Resources</a>
-    <div onload="checkLogin()" class="dropdown">
-    <button style="font-weight: bolder;" id="loginbtn" class="dropbtn" onclick="loginDropdown()">Login</button>
-    <div class="dropdown-content" id="loginDropdown">
-        <a style="padding: 20px 32px 20px 32px" onclick="loginTony()">Tony</a>
-        <a style="padding: 20px 32px 20px 32px" onclick="loginAlex()">Alex</a>
-        <a style="padding: 20px 32px 20px 32px" onclick="loginJohn()">John</a>
-        <a style="padding: 20px 32px 20px 32px" onclick="loginJoe()">Joe</a>
-    </div>
-    </div> 
-  </div>
-</body>
-<body>
+
+<body onload="loadDemo()">
     <div id="container">
-        <h1 class="title" >Personalized Banking</h1>
+        <h1 style="color: black" class="title">Finance for Cars</h1>
         <img src="img1.jpg" alt="img1">
-    <div class="text">
-        <h1>Student Accounts</h1>
-        <p1>More Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info.</p1>
-        <br><br>
-        <button class="btn">Find Out More</button>
-    </div>
+        <div class="text">
+            <h1>Driving Dreams, Financing Futures</h1>
+            <p1>Our competitive interest rates ensure that you get an affordable financing solution for your new car.</p1>
+            <br><br>
+            <button class="btn">Find Out More</button>
+        </div>
     </div>
     <div id="container1">
         <img class="fill" src="img3.jpg" alt="img3">
@@ -51,26 +35,27 @@
         </div>
         <!--button onclick="window.location.href = 'index3.html';" class="btn" id="btn3">More Information</button-->
         <!--button onclick="submitBtn3()" class="btn" id="btn3">More Information</button-->
-    </div> 
+    </div>
     <div id="container1">
         <div id="img4">
-        <img class="fill" src="img4.jpg" alt="img4">
-        <div class="text1">
-            <p1>Information</p1>
+            <img class="fill" src="img4.jpg" alt="img4">
+            <div class="text1">
+                <p1>Information</p1>
+            </div>
+            <!--button onclick="window.location.href = 'index4.html';" class="btn" id="btn4">More Information</button-->
+            <!--button onclick="submitBtn4()" class="btn" id="btn4">More Information</button-->
         </div>
-        <!--button onclick="window.location.href = 'index4.html';" class="btn" id="btn4">More Information</button-->
-        <!--button onclick="submitBtn4()" class="btn" id="btn4">More Information</button-->
-        </div>
-    </div> 
+    </div>
     <div id="container1">
         <div id="img5">
-        <img class="fill" src="img5.jpg" alt="img5">
-        <div class="text1">
-            <p1>Information</p1>
+            <img class="fill" src="img5.jpg" alt="img5">
+            <div class="text1">
+                <p1>Information</p1>
+            </div>
+            <!--button onclick="window.location.href = 'index5.html';" class="btn" id="btn5">More Information</button-->
+            <!--button onclick="submitBtn5()" class="btn" id="btn5">More Information</button-->
         </div>
-        <!--button onclick="window.location.href = 'index5.html';" class="btn" id="btn5">More Information</button-->
-        <!--button onclick="submitBtn5()" class="btn" id="btn5">More Information</button-->
-        </div>
-    </div> 
+    </div>
 </body>
+
 </html>

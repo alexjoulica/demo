@@ -1,177 +1,34 @@
 <!DOCTYPE html>
 <html>
-<body onload="checkLogin()">
-<head>
-    <title>Segment Demo</title>
-    <meta name="author" content="Alex">
-    <meta name="description" content="Products">
-    <meta charset="utf-8">
-    <link rel="stylesheet" id="style" href="main.css">
-    <script type="text/javascript" src="main.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Spline Sans' rel='stylesheet'>
-</head>
-<div class="navbar">
-    <a style="width: 20%; font-weight: bolder; font-size: 50px;" onclick="Home()">FinCX</a>
-    <div class="dropdown">
-        <button style="font-weight: bolder;" class="dropbtn" onclick="productsDropdown()">Products</button>
-        <div class="dropdown-content" id="productsDropdown">
-            <a style="padding: 20px 32px 20px 32px" onclick="Products()">Savings</a>
-            <a style="padding: 20px 32px 20px 32px">Loans</a>
-            <a style="padding: 20px 32px 20px 32px">Mortgages</a>
+    <head>
+        <title>Segment Demo</title>
+        <meta name="author" content="Alex" />
+        <meta name="description" content="Products" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" id="style" href="main.css" />
+        <script type="text/javascript" src="main.js"></script>
+        <script>
+            analytics.track("Products", {
+                sessionId: sessionId,
+                username: localStorage.getItem("usrnm", "null"),
+                channel: "Web",
+            });
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Spline Sans" rel="stylesheet" />
+    </head>
+
+    <body onload="loadDemo()">
+        <div id="container">
+            <h1 style="color: black" class="title">Car Models</h1>
+            <img src="subimg1.jpg" alt="img1" />
+            <div class="text">
+                <h1>Open online in minutes</h1>
+                <p1>Seamless Online Applications: Get Approved for Car Financing in Minutes.</p1>
+                <br />
+                <br />
+                <button class="btn">Find Out More</button>
+            </div>
         </div>
-        </div> 
-    <a style="width: 20%; padding: 40px 0px 40px 0px;">Latest News</a>
-    <a style="width: 20%; padding: 40px 0px 40px 0px;">Resources</a>
-    <div onload="checkLogin()" class="dropdown">
-    <button style="font-weight: bolder;" id="loginbtn" class="dropbtn" onclick="loginDropdown()">Login</button>
-    <div class="dropdown-content" id="loginDropdown">
-        <a style="padding: 20px 32px 20px 32px" onclick="loginTony()">Tony</a>
-        <a style="padding: 20px 32px 20px 32px" onclick="loginAlex()">Alex</a>
-        <a style="padding: 20px 32px 20px 32px" onclick="loginJohn()">John</a>
-        <a style="padding: 20px 32px 20px 32px" onclick="loginJoe()">Joe</a>
-    </div>
-    </div> 
-  </div>
-<body>
-    <div id="container">
-        <h1 class="title">Outsavings Accounts</h1>
-        <img src="subimg1.jpg" alt="img1">
-    <div class="text">
-        <h1>SimplySave</h1>
-        <p1>More Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info.</p1>
-        <br><br>
-        <button class="btn">Find Out More</button>
-    </div>
-    </div>
-    <div id="outer">
-        <div class="inner">
-        <h1 style="margin: 0px;">Model 3</h1>
-        <img src="img3.jpg" alt="img3">
-        </div>
-        <div class="inner">
-            <p1>There's no denying it. If you want something, you've got to save for it. But how about a little extra help? Our guides to savings goals contain practical hints and tips to get you started. Whatever that might be.</p1><br>
-            <h2>Features:</h2>
-            <ul>
-                <li>Save from $20-$2000 per month</li>
-                <li>Save monthly by direct debit</li>
-                <li>Joint accounts available</li>
-            </ul>
-            <h2>Benefits</h2>
-            <ul>
-                <li>Open online in minutes</li>
-                <li>Instant access in any branch</li>
-            </ul>
-        <div id="buttons">
-        <button class="applyOnline" >Apply Online</button>
-            <br>
-            <br>
-        <button onclick="Model3()" class="findOutMore" >Find Out More</button>
-        </div>
-    </div>
-    </div>    
-    <div id="outer">
-        <div class="inner">
-        <h1 style="margin: 0px;">Model X</h1>
-        <img src="img4.jpg" alt="img4">
-        </div>
-        <div class="inner">
-            <p1>There's no denying it. If you want something, you've got to save for it. But how about a little extra help? Our guides to savings goals contain practical hints and tips to get you started. Whatever that might be.</p1><br>
-            <h2>Features:</h2>
-            <ul>
-                <li>Save from $20-$2000 per month</li>
-                <li>Save monthly by direct debit</li>
-                <li>Joint accounts available</li>
-            </ul>
-            <h2>Benefits</h2>
-            <ul>
-                <li>Open online in minutes</li>
-                <li>Instant access in any branch</li>
-            </ul>
-        <div id="buttons">
-        <button class="applyOnline" >Apply Online</button>
-            <br>
-            <br>
-        <button onclick="ModelX()" class="findOutMore" >Find Out More</button>
-        </div>
-    </div>
-    </div>    
-    <div id="outer">
-        <div class="inner">
-        <h1 style="margin: 0px;">Model Y</h1>
-        <img src="img5.jpg" alt="img5">
-        </div>
-        <div class="inner">
-            <p1>There's no denying it. If you want something, you've got to save for it. But how about a little extra help? Our guides to savings goals contain practical hints and tips to get you started. Whatever that might be.</p1><br>
-            <h2>Features:</h2>
-            <ul>
-                <li>Save from $20-$2000 per month</li>
-                <li>Save monthly by direct debit</li>
-                <li>Joint accounts available</li>
-            </ul>
-            <h2>Benefits</h2>
-            <ul>
-                <li>Open online in minutes</li>
-                <li>Instant access in any branch</li>
-            </ul>
-        <div id="buttons">
-        <button class="applyOnline" >Apply Online</button>
-            <br>
-            <br>
-        <button onclick="ModelY()" class="findOutMore" >Find Out More</button>
-        </div>
-    </div>
-    </div>
-    <div id="outer">
-        <div class="inner">
-        <h1 style="margin: 0px;">Model C</h1>
-        <img src="cybertruck.jpg" alt="img5">
-        </div>
-        <div class="inner">
-            <p1>There's no denying it. If you want something, you've got to save for it. But how about a little extra help? Our guides to savings goals contain practical hints and tips to get you started. Whatever that might be.</p1><br>
-            <h2>Features:</h2>
-            <ul>
-                <li>Save from $20-$2000 per month</li>
-                <li>Save monthly by direct debit</li>
-                <li>Joint accounts available</li>
-            </ul>
-            <h2>Benefits</h2>
-            <ul>
-                <li>Open online in minutes</li>
-                <li>Instant access in any branch</li>
-            </ul>
-        <div id="buttons">
-        <button class="applyOnline" >Apply Online</button>
-            <br>
-            <br>
-        <button onclick="ModelC()" class="findOutMore" >Find Out More</button>
-        </div>
-    </div>
-    </div>
-    <div id="outer">
-        <div class="inner">
-        <h1 "style="margin: 0px;">Model P</h1>
-        <img src="plaid.jpg" alt="img5">
-        </div>
-        <div class="inner">
-            <p1>There's no denying it. If you want something, you've got to save for it. But how about a little extra help? Our guides to savings goals contain practical hints and tips to get you started. Whatever that might be.</p1><br>
-            <h2>Features:</h2>
-            <ul>
-                <li>Save from $20-$2000 per month</li>
-                <li>Save monthly by direct debit</li>
-                <li>Joint accounts available</li>
-            </ul>
-            <h2>Benefits</h2>
-            <ul>
-                <li>Open online in minutes</li>
-                <li>Instant access in any branch</li>
-            </ul>
-        <div id="buttons">
-        <button class="applyOnline" >Apply Online</button>
-            <br>
-            <br>
-        <button onclick="ModelPlaid()" class="findOutMore" >Find Out More</button>
-        </div>
-    </div>
-    </div>
-</body>
+    </body>
+    <script>addCarsToProductPage();</script>
 </html>
