@@ -45,7 +45,7 @@ body {
     border-radius: 6px;
 }
 
-#container1 {
+#subcontainer {
     position: relative;
     width: 100%;
     background-color: grey;
@@ -53,7 +53,7 @@ body {
     display: inline-block;
 }
 
-#container1 img {
+#subcontainer img {
     width: 50%;
     height: auto;
 }
@@ -66,7 +66,7 @@ body {
     object-fit: cover;
 }
 
-#container1 .btn {
+#subcontainer .btn {
     position: absolute;
     background-color: #f1f1f1;
     color: black;
@@ -78,7 +78,7 @@ body {
     text-align: center;
 }
 
-#container1 .btn:hover {
+#subcontainer .btn:hover {
     background-color: black;
     color: white;
 }
@@ -94,7 +94,7 @@ body {
     border-radius: 8px;
 }
 
-.text1 {
+.subtext {
     position: absolute;
     top: 0;
     width: 50%;
@@ -265,7 +265,7 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.car-image {
+.image {
     height: auto;
     max-width: 100%;
     border-radius: 8px;
