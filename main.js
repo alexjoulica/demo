@@ -78,7 +78,7 @@ function loadDemo() {
             <button style="font-weight: bolder;" class="dropbtn" onclick="productsDropdown()">Products</button>
             <div class="dropdown-content" id="productsDropdown">
                 <a style="padding: 20px 32px 20px 32px">Mortgages</a>
-                <a style="padding: 20px 32px 20px 32px" onclick="window.location.href = 'products.html';">Savings</a>
+                <a style="padding: 20px 32px 20px 32px" onclick="window.location.href = 'savings.html';">Savings</a>
                 <a style="padding: 20px 32px 20px 32px">Credit Cards</a>
             </div>
         </div> 
