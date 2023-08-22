@@ -77,9 +77,9 @@ function loadDemo() {
         <div class="dropdown">
             <button style="font-weight: bolder;" class="dropbtn" onclick="productsDropdown()">Products</button>
             <div class="dropdown-content" id="productsDropdown">
-                <a style="padding: 20px 32px 20px 32px" onclick="window.location.href = 'products.html';">Car Models</a>
-                <a style="padding: 20px 32px 20px 32px">Finances Options</a>
-                <a style="padding: 20px 32px 20px 32px">Insurance</a>
+                <a style="padding: 20px 32px 20px 32px">Mortgages</a>
+                <a style="padding: 20px 32px 20px 32px" onclick="window.location.href = 'products.html';">Savings</a>
+                <a style="padding: 20px 32px 20px 32px">Credit Cards</a>
             </div>
         </div> 
         
@@ -114,11 +114,25 @@ function loadDemo() {
 
 function addSavingsToProductPage() {
     let savings = [
-        ["Savings 1", "students.jpg"],
-        ["Savings 2", "family.jpg"],
-        ["Savings 3", "backpack.jpg"],
+        ["Specialized Education Savings", "students.jpg"],
+        ["SimplySavings", "family.jpg"],
+        ["Junior Saver", "backpack.jpg"],
     ];
-
+    let desc = [
+        ["Our specialized Education Savings accounts are designed for families as they get ready for college expenses. Suitable for both regular and lump deposits"],
+        ["Our SimplySavings is designed to meet your regular savings needs. Save as much as you want monthly and adjust according to your needs."],
+        ["Our Junior Saver account is designed for those wishing to start their banking journey. Save according to your needs."]
+    ];
+    let features = [
+        ["<li>Save as much as you wish</li><li>Direct Debit Option</li><li>Flexible Access</li>"],
+        ["<li>Save Monthly</li><li>Adjust amount regularly</li><li>Direct Debit Options</li>"],
+        ["<li>Save as frequently as you wish</li><li>Mobile access</li><li>Instant access to funds</li>"],
+    ];
+    let benefits = [
+        ["<li>Attractive interest rates</li><li>Online access</li>"],
+        ["<li>Instant access to funds</li><li>Attractive Interest Rates</li>"],
+        ["<li>Attractive Interest rates</li><li>Discounts from a range of stores</li>"],
+    ];
     for (let i = 0; i < savings.length; i++) {
         let savingsHTML = `
         <div class="info">
@@ -130,21 +144,14 @@ function addSavingsToProductPage() {
             </div>
 
             <div class="inner">
-                <p>Our competitive interest rates ensure that you get an affordable financing solution for your new ${savings[i][0]}.</p>
+                <p>${desc[i]}</p>
                 <br />
                 <h2>Features:</h2>
-                <ul>
-                    <li>Quick Approval</li>
-                    <li>Trade-In Options</li>
-                    <li>Exclusive Tesla Benefits</li>
-                </ul>
+                <ul>${features[i]}</ul>
                 <h2>Benefits</h2>
-                <ul>
-                    <li>Vehicle Protection Plans</li>
-                    <li>Expert Guidance</li>
-                </ul>
-
+                <ul>${benefits[i]}</ul>
                 <div id="findOutMore${i}" hidden>
+                <br><br>
                     <p><a href="tel:+19016605018">Call us on +19016605018, </a> and one of our friendly agents will help you with your application.</p>
                 </div>
 
