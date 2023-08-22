@@ -157,9 +157,9 @@ function addSavingsToProductPage() {
 
                 <div id="buttons">
                     <center>
-                        <button class="findOutMore">Apply Online</button>
+                        <button style="background-color: blue; border-color: rgba(0,0,0,0)"class="applyOnline">Apply Online</button>
                         <br /><br />
-                        <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore"style="background-color: red; border-color: red">Find Out More</button>
+                        <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore"style="background-color: grey; border-color: black">Find Out More</button>
                         <br /><br /><br /><br />
                     </center>
                 </div>
