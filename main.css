@@ -50,6 +50,7 @@ body {
     width: 100%;
     background-color: grey;
     border: 1px solid white;
+    display: inline-block;
 }
 
 #container1 img {
