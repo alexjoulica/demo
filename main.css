@@ -177,7 +177,7 @@ button {
 }
 
 .navbar {
-    position: relative;
+    position: sticky;
     top: 0;
     left: 0;
     font-family: Arial, Helvetica, sans-serif;

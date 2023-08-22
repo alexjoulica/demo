@@ -97,7 +97,8 @@ function loadDemo() {
         ["Alex", "alex@joulica.io"],
         ["John", "john@joulica.io"],
         ["Joe", "joe@joulica.io"],
-        ["Declan", "declan@joulica.io"]
+        ["Declan", "declan@joulica.io"],
+        ["Kimaya", "kimaya@joulica.io"]
     ];
 
     // Check if user is logged in
