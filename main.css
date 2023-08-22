@@ -250,13 +250,13 @@ button {
     display: block;
 }
 
-.car-container {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.car-item {
+.item {
     flex: 1;
     background-color: #f5f5f5;
     text-align: center;
@@ -271,7 +271,7 @@ button {
     border-radius: 8px;
 }
 
-.car-info {
+.info {
     margin-top: 10px;
     color: black;
 }
