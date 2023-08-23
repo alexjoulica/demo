@@ -83,8 +83,8 @@ function loadDemo() {
             </div>
         </div> 
         
-        <a style="width: 20%; padding: 40px 0px 40px 0px;">Latest News</a>
-        <a style="width: 20%; padding: 40px 0px 40px 0px;">Resources</a>
+        <a style="width: 20%; padding: 41px 0px 40px 0px;">Latest News</a>
+        <a style="width: 20%; padding: 41px 0px 40px 0px;">Resources</a>
         <div onload="checkLogin()" class="dropdown">
             <button style="font-weight: bolder;" id="loginbtn" class="dropbtn" onclick="loginDropdown()">Login</button>
             <div class="dropdown-content" id="loginDropdown"></div>
@@ -124,47 +124,65 @@ function addSavingsToProductPage() {
         ["Our Junior Saver account is designed for those wishing to start their banking journey. Save according to your needs."]
     ];
     let features = [
-        ["<li>Save as much as you wish</li><li>Direct Debit Option</li><li>Flexible Access</li>"],
-        ["<li>Save Monthly</li><li>Adjust amount regularly</li><li>Direct Debit Options</li>"],
-        ["<li>Save as frequently as you wish</li><li>Mobile access</li><li>Instant access to funds</li>"],
+        ["<li>Save as much as you wish</li><br><li>Direct Debit Option</li><br><li>Flexible Access</li>"],
+        ["<li>Save Monthly</li><br><li>Adjust amount regularly</li><br><li>Direct Debit Options</li>"],
+        ["<li>Save as frequently as you wish</li><br><li>Mobile access</li><br><li>Instant access to funds</li>"],
     ];
     let benefits = [
-        ["<li>Attractive interest rates</li><li>Online access</li>"],
-        ["<li>Instant access to funds</li><li>Attractive Interest Rates</li>"],
-        ["<li>Attractive Interest rates</li><li>Discounts from a range of stores</li>"],
+        ["<li>Attractive interest rates</li><br><li>Online access</li>"],
+        ["<li>Instant access to funds</li><br><li>Attractive Interest Rates</li>"],
+        ["<li>Attractive Interest rates</li><br><li>Discounts from a range of stores</li>"],
     ];
+    let dividerdisplay = [
+        ["block"],
+        ["block"],
+        ["none"],
+    ];
+    let dividertext = [
+        ["<h1>Cybersecurity Awareness</h1><br><p1>Our cybersecurity ensures the safety of your everyday banking so you can be confident managing your accounts and payments.</p1>"],
+        ["<h1>Register for Online Banking</h1><br><p1>Get active in minutes.</p1>"],
+        [],
+    ];
+    let dividerlink = [
+        ['<a style="bottom: 24px; position: relative; right: 0; font-size: 20px; float: right; font-weight: bolder;">Visit Cybersecurity Zone <span>&#8594;</span></a>'],
+        ['<a style="bottom: 24px; position: relative; right: 0; font-size: 20px; float: right; font-weight: bolder;">Register Now <span>&#8594;</span></a>'],
+        [],
+    ]
     for (let i = 0; i < savings.length; i++) {
         let savingsHTML = `
         <div class="info">
-            <div style="width: 30%" class="inner">
-                    <h1 style="margin: 0px; text-align: left; font-size: 22px; width: 100%;">${savings[i][0]}</h1>
+            <div style="width: auto" class="inner">
+                    <h1 style="padding: 10px 0px 30px 10px; margin: 0px; text-align: left; font-size: 22px;">${savings[i][0]}</h1>
                     <img src="${savings[i][1]}" class="image">             
             </div>
-            <div style="font-size 15px;"class="inner">
-                <br>
-                <p>${desc[i]}</p>
+            <div style="position: relative; padding: 6px 6px 6px 18px; font-size 15px;"class="inner">
+                <br><br><br>
+                <p style="width: 100%;">${desc[i]}</p>
                 <br />
                 <div style="float: left;">
                 <h2>Features:</h2>
                 <ul>${features[i]}</ul>
                 </div>
-                <div style="float: left; position: relative; left: 10%">
+                <div style="float: left; position: relative; left: 20%">
                 <h2>Benefits</h2>
                 <ul>${benefits[i]}</ul>
                 </div>
-                <br><br><br><br><br><br><br><br>
+                <div id="buttons">
+                <center>
+                    <button class="applyOnline">Apply Online</button>
+                    <br /><br />
+                    <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore">Find Out More</button>
+                    <br /><br /><br /><br />
+                </center>
+            </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
                 <div id="findOutMore${i}" hidden>
                     <p><a href="tel:+19016605018">Call us on +19016605018, </a> and one of our friendly agents will help you with your application.</p>
                 </div>
-
-                <div id="buttons">
-                    <center>
-                        <button class="applyOnline">Apply Online</button>
-                        <br /><br />
-                        <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore">Find Out More</button>
-                        <br /><br /><br /><br />
-                    </center>
-                </div>
+            </div>
+            <div style="display: ${dividerdisplay[i]}"class="divider">
+            ${dividertext[i]}
+            ${dividerlink[i]}
             </div>
         </div>`;
 

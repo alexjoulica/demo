@@ -119,9 +119,9 @@ body {
     background-color: rgb(0, 68, 255);
     color: white;
     text-align: center;
-    font-size: 12px;
+    font-size: 20px;
     padding: 14px;
-    width: 108.7px;
+    width: 157.83px;
     border: none;
 }
 
@@ -129,19 +129,16 @@ body {
     background-color: rgba(118, 118, 118, 0);
     color: black;
     text-align: center;
-    font-size: 12px;
+    font-size: 20px;
     border: 1px solid black;
     padding: 14px;
 }
 
 .inner {
-    position: relative;
-    right: 0;
-    top: 0;
-    width: 50%;
+    width: 70%;
     height: auto;
     text-align: left;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(244, 244, 244);
     padding: 6px;
     display: table-cell;
 }
@@ -161,8 +158,9 @@ a {
 
 #buttons {
     position: absolute;
-    right: 10%;
-    bottom: 15%;
+    float: left;
+    right: 0;
+    margin: 22.41px;
 }
 
 button {
@@ -202,7 +200,7 @@ button {
     border: none;
     outline: none;
     color: white;
-    padding: 40px 0px 40px 0px;
+    padding: 41px 0px 40px 0px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -261,16 +259,16 @@ button {
     border-radius: 8px;
     position: relative;
     left: 0;
-    max-width: 80%;
+    max-width: 100%;
     padding: 10px;
 }
 
 .info {
     margin-top: 0;
     color: black;
-    border-top: 1px solid black;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    background-color: rgb(244, 244, 244);
 }
 
 .info-text {
@@ -285,4 +283,21 @@ button {
 }
 .getstarted {
     color: rgb(20, 146, 214)
+}
+p {
+    margin: 0;
+}
+.divider {
+    background-color: white;
+    font-size: 15px;
+    text-align: left;
+    display: inline-block;
+    padding: 30px 30px 30px 30px;
+    margin: 0 15px 0 15px;
+}
+.divider h1 {
+    margin: 0;
+}
+ul {
+    padding: 25px;
 }
