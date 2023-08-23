@@ -1,12 +1,10 @@
 #container {
     position: relative;
 }
-
 #container img {
     width: 100%;
     height: auto;
 }
-
 #container .btn {
     display: inline-block;
     position: relative;
@@ -27,13 +25,9 @@
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: "Spline Sans";
-    font-size: 22px;
-    text-decoration: none;
+    background-color: rgb(15, 74, 168);
+    margin: 0;
 }
-
 .text {
     position: absolute;
     top: 30%;
@@ -43,17 +37,21 @@ body {
     padding: 20px;
     background-color: rgba(128, 128, 128, 0.7);
     border-radius: 6px;
+    font-family: "Spline Sans";
+    font-size: 20px;
+    color: white;
 }
 
-#subcontainer {
+.subcontainer {
     position: relative;
     width: 100%;
     background-color: grey;
-    border: 1px solid white;
     display: inline-block;
+    font-family: "Spline Sans";
+    font-size: 25px;
 }
 
-#subcontainer img {
+.subcontainer img {
     width: 50%;
     height: auto;
 }
@@ -66,7 +64,7 @@ body {
     object-fit: cover;
 }
 
-#subcontainer .btn {
+.subcontainer .btn {
     position: absolute;
     background-color: #f1f1f1;
     color: black;
@@ -78,7 +76,7 @@ body {
     text-align: center;
 }
 
-#subcontainer .btn:hover {
+.subcontainer .btn:hover {
     background-color: black;
     color: white;
 }
@@ -95,12 +93,13 @@ body {
 }
 
 .subtext {
-    position: absolute;
-    top: 0;
     width: 50%;
-    right: 0;
-    text-align: left;
     background-color: grey;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    display: table-cell;
 }
 
 #outer {
@@ -158,9 +157,11 @@ body {
 
 .title {
     position: absolute;
-    top: 10%;
+    top: 25%;
     left: 10%;
-    font-size: 40px;
+    font-size: 20px;
+    font-family: "Spline Sans";
+    color: rgb(15, 74, 168)
 }
 
 a {
@@ -266,16 +267,28 @@ button {
 }
 
 .image {
-    height: auto;
-    max-width: 100%;
     border-radius: 8px;
+    position: relative;
+    left: 15%;
+    height: auto;
+    max-width: 60%;
 }
 
 .info {
-    margin-top: 10px;
+    margin-top: 0;
     color: black;
+    border-top: 1px solid black;
+    font-family: "Spline Sans";
+    font-size: 18px;
 }
 
 .info-text {
     font-weight: bold;
+}
+.subimage {
+    max-height: 60%;
+}
+.mainimg {
+    width: 100%;
+    vertical-align:bottom;
 }

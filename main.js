@@ -137,12 +137,9 @@ function addSavingsToProductPage() {
         let savingsHTML = `
         <div class="info">
             <div class="inner">
-                <center>
-                    <h1 style="margin: 0px;">${savings[i][0]}</h1>
-                    <img src="${savings[i][1]}" class="image" width="100%" />
-                </center>
+                    <h1 style="margin: 0px; text-align: center;">${savings[i][0]}</h1>
+                    <img src="${savings[i][1]}" class="image" width="100%">
             </div>
-
             <div class="inner">
                 <p>${desc[i]}</p>
                 <br />
