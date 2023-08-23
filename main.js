@@ -136,27 +136,32 @@ function addSavingsToProductPage() {
     for (let i = 0; i < savings.length; i++) {
         let savingsHTML = `
         <div class="info">
-            <div class="inner">
-                    <h1 style="margin: 0px; text-align: center;">${savings[i][0]}</h1>
-                    <img src="${savings[i][1]}" class="image">
+            <div style="width: 30%" class="inner">
+                    <h1 style="margin: 0px; text-align: left; font-size: 22px; width: 100%;">${savings[i][0]}</h1>
+                    <img src="${savings[i][1]}" class="image">             
             </div>
-            <div class="inner">
+            <div style="font-size 15px;"class="inner">
+                <br>
                 <p>${desc[i]}</p>
                 <br />
+                <div style="float: left;">
                 <h2>Features:</h2>
                 <ul>${features[i]}</ul>
+                </div>
+                <div style="float: left; position: relative; left: 10%">
                 <h2>Benefits</h2>
                 <ul>${benefits[i]}</ul>
+                </div>
+                <br><br><br><br><br><br><br><br>
                 <div id="findOutMore${i}" hidden>
-                <br><br>
                     <p><a href="tel:+19016605018">Call us on +19016605018, </a> and one of our friendly agents will help you with your application.</p>
                 </div>
 
                 <div id="buttons">
                     <center>
-                        <button style="background-color: blue; border-color: rgba(0,0,0,0)"class="applyOnline">Apply Online</button>
+                        <button class="applyOnline">Apply Online</button>
                         <br /><br />
-                        <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore"style="background-color: grey; border-color: black">Find Out More</button>
+                        <button onclick="findOutMore('${savings[i][0]}', ${i})" class="findOutMore">Find Out More</button>
                         <br /><br /><br /><br />
                     </center>
                 </div>
