@@ -138,7 +138,7 @@ function addSavingsToProductPage() {
         <div class="info">
             <div class="inner">
                     <h1 style="margin: 0px; text-align: center;">${savings[i][0]}</h1>
-                    <img src="${savings[i][1]}" class="image" width="100%">
+                    <img src="${savings[i][1]}" class="image">
             </div>
             <div class="inner">
                 <p>${desc[i]}</p>
