@@ -7,11 +7,17 @@
         <link rel="stylesheet" href="main.css" />
         <script type="text/javascript" src="main.js"></script>
         <script>
+        // Make sure the savings event is only sent once per session
+        // Close the window to reset the session
+        if (!sessionStorage.getItem(window.location.pathname)) {
+            sessionStorage.setItem(window.location.pathname, true);
+
             analytics.track("Savings", {
                 sessionId: sessionId,
                 username: localStorage.getItem("usrnm", "null"),
                 channel: "Web",
             });
+        }
         </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
