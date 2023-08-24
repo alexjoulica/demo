@@ -24,6 +24,8 @@ function checkLogin() {
 function findOutMore(product, savingsIndex) {
     // Unhide the find out more section
     document.getElementById("findOutMore" + savingsIndex).style.display = 'block';
+    x = document.getElementById("findOutMore" + savingsIndex);
+    x.scrollIntoView({ behavior: "smooth", block: "end" });
 
     analytics.track("Savings", {
         sessionId: sessionId,
@@ -114,12 +116,12 @@ function loadDemo() {
 
 function addSavingsToProductPage() {
     let savings = [
-        ["Specialized Education Savings", "students.jpg"],
+        ["Education Saver", "students.jpg"],
         ["SimplySavings", "family.jpg"],
         ["Junior Saver", "backpack.jpg"],
     ];
     let desc = [
-        ["Our specialized Education Savings accounts are designed for families as they get ready for college expenses. Suitable for both regular and lump deposits"],
+        ["Our Education Saver accounts are designed for families as they get ready for college expenses. Suitable for both regular and lump deposits"],
         ["Our SimplySavings is designed to meet your regular savings needs. Save as much as you want monthly and adjust according to your needs."],
         ["Our Junior Saver account is designed for those wishing to start their banking journey. Save according to your needs."]
     ];
@@ -147,7 +149,12 @@ function addSavingsToProductPage() {
         ['<a style="bottom: 24px; position: relative; right: 0; font-size: 20px; float: right; font-weight: bolder;">Visit Cybersecurity Zone <span>&#8594;</span></a>'],
         ['<a style="bottom: 24px; position: relative; right: 0; font-size: 20px; float: right; font-weight: bolder;">Register Now <span>&#8594;</span></a>'],
         [],
-    ]
+    ];
+    let findOutMoreText = [
+        ["With the Education Saver Account from FinCX, you set your monthly savings amount and we do the rest. You choose the amount you want to save each month (from €1 to €1,000).  Earn 1.00% Gross / AER (variable) interest rate on balances up to €50,000.99. Earn 0.01% Gross / AER (variable) interest rate on the entire balance (including interest) if your balance exceeds €50,000.99.<br><br>You’ll receive your interest, minus Deposit Interest Retention Tax (DIRT), on the first working day after 20th November each year. A variable rate means that your interest may change from time to time. Annual Equivalent Rate (AER) illustrates what the interest would be if interest was paid and compounded each year. Our AER calculation assumes that the account is held for a year and that the interest rate remains constant."],
+        ["Apply online in minutes and start your savings habit. Save monthly by Direct Debit from large to small amounts. Minimum €5 – Maximum €2,500. Get instant access to your money in any FinCX branch. Available to 16 years of age and over. Can only be funded from one personal current account. Get our best fixed savings rate 2.00% AER (Annual Equivalent Rate), for 12 months, (Interest is subject to Deposit Interest Retention Tax (DIRT) at the prevailing rate). Receive a €100 refund on your home or car insurance policy purchased or renewed with FinCX."],
+        ["If you are a Student Saver between the ages of 12 – 17 inclusive, you can open a Junior Saver Account. If you are under 16 years old, we will need to make sure that your Parent/Guardian is happy for you to start saving with us. This account is only available as a sole account in your name. You can save as little or as much as you like, there is no minimum or maximum limit. You can save an amount that suits you monthly or just top up your balance as you choose. You have the flexibility to withdraw any amount, any time.<br><br> To reward your savings, we will give you a great interest rate on balances up to €1,000. All amounts above €1,000 will earn a lower rate of interest. Interest is variable, calculated daily and paid into your account in April and October. When you reach the age of 19, your account will automatically change to a suitable demand deposit account. We will give two months notice before this change is made We don't charge maintenance or transaction fees but there may be other service charges. For details see \"A Guide to Fees and Charges for Personal Accounts\"."],
+    ];
     for (let i = 0; i < savings.length; i++) {
         let savingsHTML = `
         <div class="info">
@@ -175,10 +182,9 @@ function addSavingsToProductPage() {
                     <br /><br /><br /><br />
                 </center>
             </div>
-                <br><br><br><br><br><br><br><br><br><br><br><br>
-                <div id="findOutMore${i}" hidden>
-                    <p><a href="tel:+19016605018">Call us on +19016605018, </a> and one of our friendly agents will help you with your application.</p>
-                </div>
+            </div>
+            <div style="margin: 0px 45px 0px 45px; padding: 10px 0 20px 0;" id="findOutMore${i}" hidden>
+            <p style="font-size: 22px; line-height: 1.5">${findOutMoreText[i]}</p>
             </div>
             <div style="display: ${dividerdisplay[i]}"class="divider">
             ${dividertext[i]}
