@@ -9,7 +9,7 @@
     <script>
     // Make sure the savings event is only sent once per session
     // Close the window to reset the session
-    if (!sessionStorage.getItem(window.location.pathname)) {
+    if (!sessionStorage.getItem(window.location.pathname) && localStorage.getItem("usrnm", null) != null) {
         sessionStorage.setItem(window.location.pathname, true);
 
         analytics.track("Homepage", {
