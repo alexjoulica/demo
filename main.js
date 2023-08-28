@@ -140,6 +140,25 @@ function loadDemo() {
         const displayName = localStorage.getItem("name", "null");
         callback(displayName);
       });
+    amazon_connect('authenticate', function(callback) {
+        callback(token)
+    });
+    let utcStr = new Date().toUTCString();
+    let exp = new Date()
+    exp.setDate(exp.getDate() + 30);
+    exp = exp.toDateString();
+    let payload = {
+        "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
+        "iat": utcStr,
+        "exp": exp,
+        "attributes": {"name": name, "email": email,},
+    };
+    let header = {
+        "typ": "JWT",
+        "alg": "HS256",
+    };
+    let token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), 'DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=' );
+    console.log(token);
 }
 
 function addSavingsToProductPage() {
