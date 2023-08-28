@@ -144,7 +144,7 @@ function loadDemo() {
         callback(token)
     });
     const utcStr = new Date().toUTCString();
-    const exp = new Date().toUTCString();
+    const exp = new Date()
     exp.setDate(exp.getDate() + 30);
     let payload = {
         "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
