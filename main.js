@@ -140,6 +140,13 @@ function loadDemo() {
         const displayName = localStorage.getItem("name", "null");
         callback(displayName);
       });
+    amazon_connect('authenticate', function(callback) {
+    window.fetch('/token').then(res => {
+        res.json().then(data => {
+        callback(data.data);
+        });
+    });
+    }); 
 }
 
 function addSavingsToProductPage() {
