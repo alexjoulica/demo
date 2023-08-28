@@ -143,8 +143,8 @@ function loadDemo() {
     amazon_connect('authenticate', function(callback) {
         callback(token)
     });
-    const utcStr = new Date().toUTCString();
-    const exp = new Date()
+    let utcStr = new Date().toUTCString();
+    let exp = new Date()
     exp.setDate(exp.getDate() + 30);
     exp = exp.toDateString();
     let payload = {
@@ -156,7 +156,7 @@ function loadDemo() {
         "typ": "JWT",
         "alg": "HS256",
     };
-    const token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), "DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=" );
+    let token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), "DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=" );
     console.log(token);
 }
 
