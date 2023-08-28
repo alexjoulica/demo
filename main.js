@@ -146,6 +146,7 @@ function loadDemo() {
     const utcStr = new Date().toUTCString();
     const exp = new Date()
     exp.setDate(exp.getDate() + 30);
+    exp = exp.toDateString();
     let payload = {
         "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
         "iat": utcStr,
@@ -155,7 +156,7 @@ function loadDemo() {
         "typ": "JWT",
         "alg": "HS256",
     };
-    const token = KJUR.jws.JWS.sign(JWT_ALGORITHM, JSON.stringify(header), JSON.stringify(payload), "DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=" );
+    const token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), "DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=" );
     console.log(token);
 }
 
