@@ -141,11 +141,7 @@ function loadDemo() {
         callback(displayName);
       });
     amazon_connect('authenticate', function(callback) {
-    window.fetch('/token').then(res => {
-        res.json().then(data => {
-        callback(data.data);
-        });
-    });
+        callback(token)
     });
     const utcStr = new Date().toUTCString();
     const exp = new Date().toUTCString();
