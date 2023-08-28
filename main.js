@@ -156,7 +156,7 @@ function loadDemo() {
         "typ": "JWT",
         "alg": "HS256",
     };
-    let token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), "DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=" );
+    let token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), 'DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=' );
     console.log(token);
 }
 
