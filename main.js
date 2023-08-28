@@ -140,9 +140,6 @@ function loadDemo() {
         const displayName = localStorage.getItem("name", "null");
         callback(displayName);
       });
-
-    let utcStr = new Date().toUTCString();
-    let exp = new Date()
     let utcStr = Math.floor(Date.now() / 1000);
     let exp = utcStr + 600;
     let payload = {
