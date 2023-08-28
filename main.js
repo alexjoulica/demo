@@ -123,6 +123,10 @@ function loadDemo() {
     amazon_connect('styles', { openChat: { color: '#ffffff', backgroundColor: '#0080ff'}, closeChat: { color: '#ffffff', backgroundColor: '#0080ff'} });
     amazon_connect('snippetId', 'QVFJREFIamdsRVl4aTRZOWtaSkdZSFNPQ0JZNE53UGdNdWFZUGJMdGZFWEdLazhGTndHWlhrMVpWTDRaVVpBdWRzTHdUby9sQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNVmhXcFpmeWtiYWErUStrc0FnRVFnQ3ZsaTdhSU85THZ2UFNpWE8rbStBZzlOMGJnR1A3NEtoclNiTllPQzNUZ1BkNDJZSnNRYlI1S2xsaGI6OjlwNEQwNkM1eXMzRER3NmlrSkJPck1IQmxucFVvTWJUeGNiSStwUW45MThkUUZiSGRnaEFZVFZoSXNnenZHbmFPOW43Q3ZPSDNmZWtEa0Q0cTZwcVRPUWZTMWJGci9RSEUwRWw5WTEvWE54K05ndEw5OVRWUHBmNUhkWU9malk4ZGp3dkhieHdXME5hVEpMSk5Za3BOdnR4MG9MZFZ6ST0=');
     amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]);
+    amazon_connect("customerDisplayName", function(callback) {
+        const displayName = localStorage.getItem("usrnm", "null");
+        callback(displayName);
+      });
 }
 
 function addSavingsToProductPage() {
