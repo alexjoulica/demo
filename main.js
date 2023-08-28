@@ -146,7 +146,21 @@ function loadDemo() {
         callback(data.data);
         });
     });
-    }); 
+    });
+    const utcStr = new Date().toUTCString();
+    const exp = new Date().toUTCString();
+    exp.setDate(exp.getDate() + 30);
+    let payload = {
+        "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
+        "iat": utcStr,
+        "exp": exp,
+    };
+    let header = {
+        "typ": "JWT",
+        "alg": "HS256",
+    };
+    const token = KJUR.jws.JWS.sign(JWT_ALGORITHM, JSON.stringify(header), JSON.stringify(payload), "DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=" );
+    console.log(token);
 }
 
 function addSavingsToProductPage() {
