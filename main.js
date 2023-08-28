@@ -145,8 +145,8 @@ function loadDemo() {
     });
     let utcStr = new Date().toUTCString();
     let exp = new Date()
-    exp.setDate(exp.getDate() + 30);
-    exp = exp.toDateString();
+    let utcStr = Math.floor(Date.now() / 1000);
+    let exp = utcStr + 600;
     let payload = {
         "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
         "iat": utcStr,
