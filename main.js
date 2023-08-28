@@ -151,7 +151,7 @@ function loadDemo() {
         "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
         "iat": utcStr,
         "exp": exp,
-        "attributes": {"name": name, "email": username,},
+        "attributes": {"name": name, "email": localStorage.getItem("usrnm", "null"),},
     };
     let header = {
         "typ": "JWT",
