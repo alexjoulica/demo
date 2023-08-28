@@ -37,6 +37,19 @@ function findOutMore(product, savingsIndex) {
 
 function login(email) {
     localStorage.setItem("id", Math.floor(Math.random() * 101));
+    if (email=="alex@joulica.io"){
+        localStorage.setItem("name", "Alex")
+    } else if (email=="tony@joulica.io") {
+        localStorage.setItem("name", "Tony")
+    } else if (email=="john@joulica.io") {
+        localStorage.setItem("name", "John")
+    } else if (email=="joe@joulica.io") {
+        localStorage.setItem("name", "Joe")
+    } else if (email=="kimaya@joulica.io") {
+        localStorage.setItem("name", "Kimaya")
+    } else if (email=="declan@joulica.io") {
+        localStorage.setItem("name", "Declan")
+    }
     localStorage.setItem("usrnm", email);
     document.getElementById("loginbtn").innerHTML = "Logged In: " + localStorage.getItem("usrnm");
 
@@ -124,7 +137,7 @@ function loadDemo() {
     amazon_connect('snippetId', 'QVFJREFIamdsRVl4aTRZOWtaSkdZSFNPQ0JZNE53UGdNdWFZUGJMdGZFWEdLazhGTndHWlhrMVpWTDRaVVpBdWRzTHdUby9sQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNVmhXcFpmeWtiYWErUStrc0FnRVFnQ3ZsaTdhSU85THZ2UFNpWE8rbStBZzlOMGJnR1A3NEtoclNiTllPQzNUZ1BkNDJZSnNRYlI1S2xsaGI6OjlwNEQwNkM1eXMzRER3NmlrSkJPck1IQmxucFVvTWJUeGNiSStwUW45MThkUUZiSGRnaEFZVFZoSXNnenZHbmFPOW43Q3ZPSDNmZWtEa0Q0cTZwcVRPUWZTMWJGci9RSEUwRWw5WTEvWE54K05ndEw5OVRWUHBmNUhkWU9malk4ZGp3dkhieHdXME5hVEpMSk5Za3BOdnR4MG9MZFZ6ST0=');
     amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]);
     amazon_connect("customerDisplayName", function(callback) {
-        const displayName = localStorage.getItem("usrnm", "null");
+        const displayName = localStorage.getItem("name", "null");
         callback(displayName);
       });
 }
