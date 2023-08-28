@@ -170,7 +170,7 @@ function addSavingsToProductPage() {
                 <h2>Features:</h2>
                 <ul>${features[i]}</ul>
                 </div>
-                <div style="float: left; position: relative; left: 20%">
+                <div style="float: left; position: relative; left: 10%">
                 <h2>Benefits</h2>
                 <ul>${benefits[i]}</ul>
                 </div>
