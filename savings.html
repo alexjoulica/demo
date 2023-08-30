@@ -7,15 +7,14 @@
         <link rel="stylesheet" href="main.css" />
         <script type="text/javascript" src="main.js"></script>
         <script>
-        // Make sure the savings event is only sent once per session
-        // Close the window to reset the session
-        if (!sessionStorage.getItem(window.location.pathname)) {
-            sessionStorage.setItem(window.location.pathname, true);
-
+        // Only send the Savings if the user is logged in
+        if (localStorage.getItem("username") != null) {
             analytics.track("Savings", {
-                sessionId: sessionId,
-                username: localStorage.getItem("usrnm", "null"),
-                channel: "Web",
+                event: "Option",
+                intent: "Savings",
+
+                sessionID: sessionID,
+                username: localStorage.getItem("username"),
             });
         }
         </script>

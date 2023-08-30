@@ -1,20 +1,22 @@
-var sessionId = sessionStorage.getItem("sessionId");
-if (sessionId == null) {
-    sessionId = Math.floor(Math.random() * 100000);
-    sessionStorage.setItem("sessionId", sessionId);
+var sessionID = sessionStorage.getItem("sessionID");
+function generateSessionID() {
+    sessionID = Math.floor(Math.random() * 100000);
+    sessionStorage.setItem("sessionID", sessionID);
 }
+if (!sessionID) generateSessionID();
+
 /* Load the Analytics */
 !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="SDfgj9GHaQwyoSSDOzvT8G1itoJSbd74";;analytics.SNIPPET_VERSION="4.16.1";
     analytics.load("SDfgj9GHaQwyoSSDOzvT8G1itoJSbd74");
     analytics.page({
-        sessionId: sessionId,
-        username: localStorage.getItem("usrnm", "null")
+        sessionID: sessionID,
+        username: localStorage.getItem("username")
     });
 }}();
 /* Load the Analytics */
+
 function checkLogin() {
-    var x = localStorage.getItem("usrnm", "null");
-    if (x == null) {
+    if (localStorage.getItem("username") == null) {
         document.getElementById("loginbtn").innerHTML = "Login";
     } else {
         document.getElementById("loginpfp").style.display = "block";
@@ -23,36 +25,38 @@ function checkLogin() {
 
 function findOutMore(product, savingsIndex) {
     // Unhide the find out more section
-    document.getElementById("findOutMore" + savingsIndex).style.display = 'block';
-    x = document.getElementById("findOutMore" + savingsIndex);
-    x.scrollIntoView({ behavior: "smooth", block: "end" });
+    document.getElementById("findOutMore" + savingsIndex).style.display = "block";
+    let findOutMore = document.getElementById("findOutMore" + savingsIndex);
+    findOutMore.scrollIntoView({ behavior: "smooth", block: "end" });
 
-    analytics.track("Savings", {
-        sessionId: sessionId,
-        username: localStorage.getItem("usrnm", "null"),
-        channel: "Web",
-        product: product,
-    });
+    if (localStorage.getItem("username") != null) {
+        analytics.track("Savings", {
+            event: "Product",
+            channel: "Web",
+            product: product,
+
+            sessionID: sessionID,
+            username: localStorage.getItem("username"),
+        });
+    }
 }
 
-function login(email) {
-    localStorage.setItem("id", Math.floor(Math.random() * 101));
-    if (email=="alex@joulica.io"){
-        localStorage.setItem("name", "Alex")
-    } else if (email=="tony@joulica.io") {
-        localStorage.setItem("name", "Tony")
-    } else if (email=="john@joulica.io") {
-        localStorage.setItem("name", "John")
-    } else if (email=="joe@joulica.io") {
-        localStorage.setItem("name", "Joe")
-    } else if (email=="kimaya@joulica.io") {
-        localStorage.setItem("name", "Kimaya")
-    } else if (email=="declan@joulica.io") {
-        localStorage.setItem("name", "Declan")
-    }
-    localStorage.setItem("usrnm", email);
-    document.getElementById("loginbtn").innerHTML = "Logged In: " + localStorage.getItem("usrnm");
+function login(name, email) {
+    // Reload session ID
+    generateSessionID();
 
+    localStorage.setItem("name", name);
+    localStorage.setItem("username", email);
+
+    analytics.track("Savings", {
+        event: "Homepage",
+        channel: "Web",
+
+        sessionID: sessionID,
+        username: localStorage.getItem("username"),
+    });
+
+    // Reload the page
     window.location = window.location;
 }
 
@@ -61,9 +65,13 @@ function productsDropdown() {
 }
 
 function loginDropdown() {
-    if (localStorage.getItem("usrnm")) {
+    if (localStorage.getItem("username")) {
         // Logout
-        localStorage.removeItem("usrnm");
+        localStorage.removeItem("username");
+
+        // Reload session ID
+        sessionStorage.removeItem("sessionID");
+
         window.location = window.location;
     } else {
         // Show Login
@@ -117,51 +125,62 @@ function loadDemo() {
     ];
 
     // Check if user is logged in
-    if (!localStorage.getItem("usrnm")) {
+    if (!localStorage.getItem("username")) {
         // Add users to login dropdown
         for (let i = 0; i < users.length; i++) {
-            document.getElementById("loginDropdown").innerHTML += `<a style="padding: 20px 32px 20px 32px" onclick="login('${users[i][1]}')">${users[i][0]}</a>`;
+            document.getElementById("loginDropdown").innerHTML += `<a style="padding: 20px 32px 20px 32px" onclick="login('${users[i][0]}', '${users[i][1]}')">${users[i][0]}</a>`;
         }
     } else {
-        document.getElementById("loginbtn").innerHTML = "Logout of " + localStorage.getItem("usrnm");
+        document.getElementById("loginbtn").innerHTML = "Logout of " + localStorage.getItem("username");
     }
-    (function(w, d, x, id){
-        s=d.createElement('script');
-        s.src='https://dg9yx063wiiht.cloudfront.net/amazon-connect-chat-interface-client.js';
-        s.async=1;
-        s.id=id;
-        d.getElementsByTagName('head')[0].appendChild(s);
-        w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
-    })(window, document, 'amazon_connect', 'e365379e-7723-4c5c-9b9b-2109e7c8c9ac');
-    amazon_connect('styles', { openChat: { color: '#ffffff', backgroundColor: '#0080ff'}, closeChat: { color: '#ffffff', backgroundColor: '#0080ff'} });
-    amazon_connect('snippetId', 'QVFJREFIamdsRVl4aTRZOWtaSkdZSFNPQ0JZNE53UGdNdWFZUGJMdGZFWEdLazhGTndHWlhrMVpWTDRaVVpBdWRzTHdUby9sQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNVmhXcFpmeWtiYWErUStrc0FnRVFnQ3ZsaTdhSU85THZ2UFNpWE8rbStBZzlOMGJnR1A3NEtoclNiTllPQzNUZ1BkNDJZSnNRYlI1S2xsaGI6OjlwNEQwNkM1eXMzRER3NmlrSkJPck1IQmxucFVvTWJUeGNiSStwUW45MThkUUZiSGRnaEFZVFZoSXNnenZHbmFPOW43Q3ZPSDNmZWtEa0Q0cTZwcVRPUWZTMWJGci9RSEUwRWw5WTEvWE54K05ndEw5OVRWUHBmNUhkWU9malk4ZGp3dkhieHdXME5hVEpMSk5Za3BOdnR4MG9MZFZ6ST0=');
-    amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]);
-    amazon_connect("customerDisplayName", function(callback) {
-        const displayName = localStorage.getItem("name", "null");
-        callback(displayName);
-      });
-    let utcStr = Math.floor(Date.now() / 1000);
-    let exp = utcStr + 600;
-    let payload = {
-        "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
-        "iat": utcStr,
-        "exp": exp,
-        "attributes": {"name": name, "email": localStorage.getItem("usrnm", "null"),},
-    };
-    let header = {
-        "typ": "JWT",
-        "alg": "HS256",
-    };
-    let token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), 'DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=' );
-    console.log(token);
-    amazon_connect('authenticate', function(callback) {
-        callback(token)
-    });
+
+    /* Load the Chat only if the user is logged in */
+    if (localStorage["username"]) {
+        (function(w, d, x, id){
+            s=d.createElement('script');
+            s.src='https://dg9yx063wiiht.cloudfront.net/amazon-connect-chat-interface-client.js';
+            s.async=1;
+            s.id=id;
+            d.getElementsByTagName('head')[0].appendChild(s);
+            w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+        })(window, document, 'amazon_connect', 'e365379e-7723-4c5c-9b9b-2109e7c8c9ac');
+        amazon_connect('styles', { openChat: { color: '#ffffff', backgroundColor: '#0080ff'}, closeChat: { color: '#ffffff', backgroundColor: '#0080ff'} });
+        amazon_connect('snippetId', 'QVFJREFIamdsRVl4aTRZOWtaSkdZSFNPQ0JZNE53UGdNdWFZUGJMdGZFWEdLazhGTndHWlhrMVpWTDRaVVpBdWRzTHdUby9sQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNVmhXcFpmeWtiYWErUStrc0FnRVFnQ3ZsaTdhSU85THZ2UFNpWE8rbStBZzlOMGJnR1A3NEtoclNiTllPQzNUZ1BkNDJZSnNRYlI1S2xsaGI6OjlwNEQwNkM1eXMzRER3NmlrSkJPck1IQmxucFVvTWJUeGNiSStwUW45MThkUUZiSGRnaEFZVFZoSXNnenZHbmFPOW43Q3ZPSDNmZWtEa0Q0cTZwcVRPUWZTMWJGci9RSEUwRWw5WTEvWE54K05ndEw5OVRWUHBmNUhkWU9malk4ZGp3dkhieHdXME5hVEpMSk5Za3BOdnR4MG9MZFZ6ST0=');
+        amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown' ]);
+        amazon_connect("customerDisplayName", function(callback) {
+            const displayName = localStorage.getItem("name", "null");
+            callback(displayName);
+        });
+        let utcStr = Math.floor(Date.now() / 1000);
+        let exp = utcStr + 600;
+        let payload = {
+            "sub": "e365379e-7723-4c5c-9b9b-2109e7c8c9ac",
+            "iat": utcStr,
+            "exp": exp,
+            "attributes": {
+                "name": name,
+                "email": localStorage.getItem("username")
+            },
+            "properties": {
+                "sessionID": sessionID,
+            }
+        };
+        let header = {
+            "typ": "JWT",
+            "alg": "HS256"
+        };
+        let token = KJUR.jws.JWS.sign("HS256", JSON.stringify(header), JSON.stringify(payload), 'DR/pwpuOtHT+z0D5UQe0KsJ8JDStihUHHaDgeS4Yi9U=' );
+        console.log(token);
+        amazon_connect('authenticate', function(callback) {
+            callback(token)
+        });
+    }
+    /* Load the Chat */
 }
 
 function addSavingsToProductPage() {
     let savings = [
-        ["Education Saver", "students.jpg"],
+        ["Education", "students.jpg"],
         ["SimplySavings", "family.jpg"],
         ["Junior Saver", "backpack.jpg"],
     ];
