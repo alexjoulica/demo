@@ -32,7 +32,7 @@ function findOutMore(product, savingsIndex) {
     if (localStorage.getItem("username") != null) {
         analytics.track("Savings", {
             event: "Product",
-            channel: "Web",
+            // channel: "Web",
             product: product,
 
             sessionID: sessionID,
