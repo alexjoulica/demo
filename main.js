@@ -1,6 +1,12 @@
 var sessionID = sessionStorage.getItem("sessionID");
 function generateSessionID() {
-    sessionID = Math.floor(Math.random() * 100000);
+    sessionID = new String();
+
+    for (let i = 0; i < 8; i++) {
+        let hex = Math.floor(Math.random() * 256).toString(16);
+        sessionID += (hex.length == 1 ? '0' : '1') + hex;
+    }
+
     sessionStorage.setItem("sessionID", sessionID);
 }
 if (!sessionID) generateSessionID();
