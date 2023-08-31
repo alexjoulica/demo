@@ -52,7 +52,7 @@ function login(name, email) {
         event: "Homepage",
         channel: "Web",
 
-        sessionID: sessionID,
+        sessionId: sessionID,
         username: localStorage.getItem("username"),
     });
 
